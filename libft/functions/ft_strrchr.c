@@ -1,23 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seohyuki <seohyuki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/07 15:20:31 by seohyuki          #+#    #+#             */
-/*   Updated: 2022/03/22 16:36:12 by seohyuki         ###   ########.fr       */
+/*   Created: 2022/03/22 16:44:55 by seohyuki          #+#    #+#             */
+/*   Updated: 2022/03/22 17:01:47 by seohyuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+char	*ft_strrchr(const char *s, int c)
 {
-	size_t	i;
+	unsigned int	i;
+	unsigned int	find;
 
 	i = 0;
-	while (s[i] != '\0')
+	find = 0;
+	while (s[i])
+	{
+		if (s[i] == c)
+			find = i;
 		i++;
-	return (i);
+	}
+	if (s[i] == c)
+		return ((char *)s + i);
+	if (s[find] == c)
+		return ((char *)s + find);
+	return (NULL);
 }
