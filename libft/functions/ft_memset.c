@@ -6,11 +6,11 @@
 /*   By: seohyuki <seohyuki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 15:41:11 by seohyuki          #+#    #+#             */
-/*   Updated: 2022/03/07 16:07:37 by seohyuki         ###   ########.fr       */
+/*   Updated: 2022/03/09 14:45:53 by seohyuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
 
 void	*ft_memset(void *b, int c, size_t len)
 {

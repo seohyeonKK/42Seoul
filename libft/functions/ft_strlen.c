@@ -6,11 +6,11 @@
 /*   By: seohyuki <seohyuki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 15:20:31 by seohyuki          #+#    #+#             */
-/*   Updated: 2022/03/07 15:40:23 by seohyuki         ###   ########.fr       */
+/*   Updated: 2022/03/09 14:45:52 by seohyuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
 
 size_t	ft_strlen(const char *s)
 {
