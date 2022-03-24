@@ -1,26 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seohyuki <seohyuki@student.42.fr>          +#+  +:+       +#+        */
+/*   By: seohyuki <seohyuki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/07 15:41:11 by seohyuki          #+#    #+#             */
-/*   Updated: 2022/03/24 13:42:47 by seohyuki         ###   ########.fr       */
+/*   Created: 2022/03/22 16:44:55 by seohyuki          #+#    #+#             */
+/*   Updated: 2022/03/22 17:01:47 by seohyuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+char	*ft_strrchr(const char *s, int c)
 {
-	size_t	i;
+	unsigned int	i;
+	unsigned int	find;
 
 	i = 0;
-	while (i < len)
+	find = 0;
+	while (s[i])
 	{
-		((unsigned char *)b)[i] = (unsigned char)c;
+		if (s[i] == c)
+			find = i;
 		i++;
 	}
-	return (b);
+	if (s[i] == c)
+		return ((char *)s + i);
+	if (s[find] == c)
+		return ((char *)s + find);
+	return (NULL);
 }
