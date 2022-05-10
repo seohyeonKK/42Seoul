@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seohyuki <seohyuki@student.42seoul.kr>     +#+  +:+       +#+        */
+/*   By: seohyeon <seohyeon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/21 13:03:13 by seohyuki          #+#    #+#             */
-/*   Updated: 2022/05/03 14:19:28 by seohyuki         ###   ########.fr       */
+/*   Created: 2022/05/10 16:42:16 by seohyuki          #+#    #+#             */
+/*   Updated: 2022/05/10 17:07:38 by seohyeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+char	*ft_strdup(const char *s1)
 {
-	size_t	i;
+	char	*str;
 	size_t	length;
+	size_t	i;
 
-	length = ft_strlen(src);
-	if (dstsize == 0)
-		return (length);
+	length = ft_strlen(s1);
+	str = (char *)malloc(sizeof(char) * (length + 1));
+	if (str == NULL)
+		return (NULL);
 	i = 0;
-	while (i < dstsize - 1 && src[i])
+
+	while (i < length)
 	{
-		dst[i] = src[i];
+		str[i] = s1[i];
 		i++;
 	}
-	if (dstsize != 0)
-		dst[i] = '\0';
-	return (length);
+	str[i] = '\0';
+	return (str);
 }

@@ -6,7 +6,7 @@
 /*   By: seohyuki <seohyuki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 18:25:35 by seohyuki          #+#    #+#             */
-/*   Updated: 2022/03/22 16:37:20 by seohyuki         ###   ########.fr       */
+/*   Updated: 2022/05/03 15:18:54 by seohyuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,6 @@ int		ft_isascii(int c);
 int		ft_isalpha(int c);
 int		ft_isalnum(int c);
 void	ft_bzero(void *s, size_t n);
+void	*ft_memchr(const void *s, int c, size_t n);
 
 #endif
