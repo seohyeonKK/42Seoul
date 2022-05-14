@@ -1,0 +1,12 @@
+{
+  "editor.tabSize": 4,
+  "editor.insertSpaces": false,
+  "editor.renderWhitespace": "all",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "42header.username": "seohyuki",
+  "42header.email": "seohyuki@student.42seoul.kr",
+  "files.associations": {
+    "libft.h": "c"
+  }
+}
