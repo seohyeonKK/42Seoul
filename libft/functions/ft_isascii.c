@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seohyuki <seohyuki@student.42.fr>          +#+  +:+       +#+        */
+/*   By: seohyuki <seohyuki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 15:10:25 by seohyuki          #+#    #+#             */
-/*   Updated: 2022/03/07 15:17:04 by seohyuki         ###   ########.fr       */
+/*   Updated: 2022/05/15 00:19:18 by seohyuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isascii(int c)
 {
-	if (c >= 0 && c <= 0177)
+	if (c >= 0 && c <= 127)
 		return (1);
 	return (0);
 }

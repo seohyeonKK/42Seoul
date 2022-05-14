@@ -1,34 +1,54 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seohyuki <seohyuki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/10 16:42:16 by seohyuki          #+#    #+#             */
-/*   Updated: 2022/05/11 14:59:15 by seohyuki         ###   ########.fr       */
+/*   Created: 2022/05/10 17:13:26 by seohyuki          #+#    #+#             */
+/*   Updated: 2022/05/15 01:28:56 by seohyuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+static size_t	get_size(unsigned int start, size_t len, size_t n)
+{
+	size_t	size;
+
+	if (start >= n)
+		size = 0;
+	else if (n - start < len)
+		size = n - start;
+	else
+		size = len;
+	return (size);
+}
+
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*str;
-	size_t	length;
+	size_t	n;
+	size_t	size;
 	size_t	i;
 
-	length = ft_strlen(s1);
-	str = (char *)malloc(sizeof(char) * (length + 1));
-	if (str == NULL)
+	if (!s)
 		return (NULL);
-	i = 0;
 
-	while (i < length)
+	n = ft_strlen(s);
+
+	size = get_size(start, len, n);
+	str = (char *)malloc(sizeof(char) * (size + 1));
+	if (!str)
+		return (NULL);
+
+	i = 0;
+	while (i < size)
 	{
-		str[i] = s1[i];
+		str[i] = s[start + i];
 		i++;
 	}
 	str[i] = '\0';
+
 	return (str);
 }

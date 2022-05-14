@@ -6,7 +6,7 @@
 /*   By: seohyuki <seohyuki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 16:04:50 by seohyuki          #+#    #+#             */
-/*   Updated: 2022/05/10 16:45:04 by seohyuki         ###   ########.fr       */
+/*   Updated: 2022/05/11 14:53:39 by seohyuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,13 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	void	*memory;
+	void	*alloc;
 	size_t	i;
 
-	memory = (void *)malloc(count * size);
-	if (memory == NULL)
+	alloc = (void *)malloc(count * size);
+	if (alloc == NULL)
 		return (NULL);
-	while (i < count * size)
-	{
-		*(((char *)memory) + i) = 0;
-		i++;
-	}
-	return (memory);
+	ft_bzero(alloc, count * size);
+
+	return (alloc);
 }

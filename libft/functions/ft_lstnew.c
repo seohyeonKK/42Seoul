@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seohyuki <seohyuki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/22 16:29:01 by seohyuki          #+#    #+#             */
-/*   Updated: 2022/05/15 01:16:42 by seohyuki         ###   ########.fr       */
+/*   Created: 2022/05/14 20:45:31 by seohyuki          #+#    #+#             */
+/*   Updated: 2022/05/15 01:39:52 by seohyuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+t_list	*ft_lstnew(void *content)
 {
-	unsigned int	i;
+	t_list	*new;
 
-	i = 0;
-	while (s[i])
-	{
-		if (s[i] == c)
-			return ((char *)(s + i));
-		i++;
-	}
-	if (s[i] == c)
-		return ((char *)(s + i));
-	return (NULL);
+	new = (t_list *)malloc(sizeof(t_list));
+	if (!new)
+		return (NULL);
+	new->content = content;
+	new->next = NULL;
+	return (new);
 }

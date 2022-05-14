@@ -6,7 +6,7 @@
 /*   By: seohyuki <seohyuki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/22 16:44:55 by seohyuki          #+#    #+#             */
-/*   Updated: 2022/03/22 17:01:47 by seohyuki         ###   ########.fr       */
+/*   Updated: 2022/05/15 01:21:27 by seohyuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ char	*ft_strrchr(const char *s, int c)
 		i++;
 	}
 	if (s[i] == c)
-		return ((char *)s + i);
+		return ((char *)(s + i));
 	if (s[find] == c)
-		return ((char *)s + find);
+		return ((char *)(s + find));
 	return (NULL);
 }

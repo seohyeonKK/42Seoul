@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seohyuki <seohyuki@student.42.fr>          +#+  +:+       +#+        */
+/*   By: seohyuki <seohyuki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 15:17:37 by seohyuki          #+#    #+#             */
-/*   Updated: 2022/03/07 15:20:13 by seohyuki         ###   ########.fr       */
+/*   Updated: 2022/05/15 00:20:19 by seohyuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isprint(int c)
 {
-	if (c >= 40 && c <= 176)
+	if (c >= 32 && c <= 126)
 		return (1);
 	return (0);
 }

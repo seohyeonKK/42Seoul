@@ -6,13 +6,13 @@
 /*   By: seohyuki <seohyuki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 16:34:15 by seohyuki          #+#    #+#             */
-/*   Updated: 2022/05/04 17:50:08 by seohyuki         ###   ########.fr       */
+/*   Updated: 2022/05/15 01:26:13 by seohyuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	is_same(const char *str1, const char *str2, size_t len)
+static int	is_same(const char *str1, const char *str2, size_t len)
 {
 	size_t	i;
 
