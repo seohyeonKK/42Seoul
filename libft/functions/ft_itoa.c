@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seohyuki <seohyuki@student.42seoul.kr>     +#+  +:+       +#+        */
+/*   By: seohyuki <seohyuki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 19:20:53 by seohyuki          #+#    #+#             */
-/*   Updated: 2022/05/15 01:34:59 by seohyuki         ###   ########.fr       */
+/*   Updated: 2022/05/15 17:51:03 by seohyuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,13 @@ static void	ft_putnbr(char *str, unsigned int size, int n)
 	str[size] = '\0';
 	last = n % 10;
 	n /= 10;
-	if (last < 0)
+	if (n < 0 || last < 0)
 	{
 		last *= (-1);
 		str[0] = '-';
 		n *= (-1);
 	}
 	str[--size] = last + '0';
-
 	while (n != 0)
 	{
 		str[--size] = (n % 10) + '0';
@@ -52,18 +51,13 @@ static void	ft_putnbr(char *str, unsigned int size, int n)
 char	*ft_itoa(int n)
 {
 	unsigned int	size;
-	int				num;
-	int				negative;
 	char			*str;
 
 	if (n == 0)
 		return (ft_strdup("0"));
-	negative = 0;
-	if (n < 0)
-		negative = 1;
 	size = get_size(n);
 	str = (char *)malloc(sizeof(char) * (size + 1));
-	if (str == NULL)
+	if (!str)
 		return (NULL);
 	ft_putnbr(str, size, n);
 	return (str);

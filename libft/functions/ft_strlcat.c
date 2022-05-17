@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seohyuki <seohyuki@student.42seoul.kr>     +#+  +:+       +#+        */
+/*   By: seohyuki <seohyuki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 14:17:16 by seohyuki          #+#    #+#             */
-/*   Updated: 2022/05/15 00:57:27 by seohyuki         ###   ########.fr       */
+/*   Updated: 2022/05/15 16:05:05 by seohyuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst_length = ft_strlen(dst);
 	src_length = ft_strlen(src);
 	if (dst_length >= dstsize)
-		return (dst_length + src_length);
+		return (dstsize + src_length);
 	i = 0;
 	while (i < dstsize - dst_length - 1 && src[i])
 	{

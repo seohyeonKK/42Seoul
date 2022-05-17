@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seohyuki <seohyuki@student.42seoul.kr>     +#+  +:+       +#+        */
+/*   By: seohyuki <seohyuki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 17:13:26 by seohyuki          #+#    #+#             */
-/*   Updated: 2022/05/15 01:28:56 by seohyuki         ###   ########.fr       */
+/*   Updated: 2022/05/15 13:21:27 by seohyuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (!s)
 		return (NULL);
-
 	n = ft_strlen(s);
-
 	size = get_size(start, len, n);
 	str = (char *)malloc(sizeof(char) * (size + 1));
 	if (!str)
 		return (NULL);
-
 	i = 0;
 	while (i < size)
 	{
@@ -49,6 +46,5 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		i++;
 	}
 	str[i] = '\0';
-
 	return (str);
 }

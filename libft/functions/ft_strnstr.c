@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seohyuki <seohyuki@student.42seoul.kr>     +#+  +:+       +#+        */
+/*   By: seohyuki <seohyuki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 16:34:15 by seohyuki          #+#    #+#             */
-/*   Updated: 2022/05/15 01:26:13 by seohyuki         ###   ########.fr       */
+/*   Updated: 2022/05/15 16:13:16 by seohyuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,9 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t	i;
 
 	i = 0;
-	while (i < len)
+	if (needle[0] == '\0')
+		return ((char *)(haystack));
+	while (i < len && haystack[i])
 	{
 		if (haystack[i] == needle[0])
 		{

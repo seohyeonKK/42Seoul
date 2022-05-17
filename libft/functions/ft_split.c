@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seohyuki <seohyuki@student.42seoul.kr>     +#+  +:+       +#+        */
+/*   By: seohyuki <seohyuki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 01:23:09 by seohyuki          #+#    #+#             */
-/*   Updated: 2022/05/15 01:34:19 by seohyuki         ###   ########.fr       */
+/*   Updated: 2022/05/15 17:42:30 by seohyuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static unsigned int	get_string_count(char const *s, char c, unsigned int *len)
 
 	start = 0;
 	cnt = 0;
-	while (s[start] == c)
+	while (s[start] && s[start] == c)
 		start++;
 	end = start;
 	while (s[end])
@@ -59,12 +59,11 @@ static char	*create_str(char const *s, unsigned int start, unsigned int len)
 	char	*str;
 
 	str = (char *)ft_calloc((len + 1), sizeof(char));
-	if (str == NULL)
+	if (!str)
 		return (NULL);
 	ft_strlcpy(str, s + start, len + 1);
 	return (str);
 }
-
 
 static void	get_strings(char **arr, unsigned int length, char const *s, char c)
 {
@@ -74,7 +73,7 @@ static void	get_strings(char **arr, unsigned int length, char const *s, char c)
 
 	start = 0;
 	idx = 0;
-	while (s[start] == c)
+	while (s[start] && s[start] == c)
 		start++;
 	end = start;
 	while (end <= length)
@@ -82,11 +81,11 @@ static void	get_strings(char **arr, unsigned int length, char const *s, char c)
 		if ((s[end] == '\0' || s[end] == c) && end > start)
 		{
 			arr[idx] = create_str(s, start, end - start);
-			if (arr[idx] == NULL)
+			if (!arr[idx])
 				return (free_all(arr));
 			idx++;
 			start = end + 1;
-			while (s[start] == c)
+			while (start < length && s[start] == c)
 				start++;
 			end = start;
 		}
@@ -104,7 +103,8 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	count = get_string_count(s, c, &length);
 	arr = (char **)ft_calloc((count + 1), sizeof(char *));
+	if (!arr)
+		return (NULL);
 	get_strings(arr, length, s, c);
-
 	return (arr);
 }

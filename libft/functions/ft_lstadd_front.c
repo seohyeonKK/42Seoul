@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seohyuki <seohyuki@student.42seoul.kr>     +#+  +:+       +#+        */
+/*   By: seohyuki <seohyuki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/14 20:51:02 by seohyuki          #+#    #+#             */
-/*   Updated: 2022/05/15 01:39:12 by seohyuki         ###   ########.fr       */
+/*   Updated: 2022/05/15 13:17:43 by seohyuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,4 +19,3 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 	new->next = (*lst);
 	*lst = new;
 }
-

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seohyuki <seohyuki@student.42seoul.kr>     +#+  +:+       +#+        */
+/*   By: seohyuki <seohyuki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 16:04:50 by seohyuki          #+#    #+#             */
-/*   Updated: 2022/05/11 14:53:39 by seohyuki         ###   ########.fr       */
+/*   Updated: 2022/05/17 15:04:20 by seohyuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,12 @@
 void	*ft_calloc(size_t count, size_t size)
 {
 	void	*alloc;
-	size_t	i;
 
+	if (size != 0 && count * size / size != count)
+		return (NULL);
 	alloc = (void *)malloc(count * size);
-	if (alloc == NULL)
+	if (!alloc)
 		return (NULL);
 	ft_bzero(alloc, count * size);
-
 	return (alloc);
 }

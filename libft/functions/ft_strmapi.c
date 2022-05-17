@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seohyuki <seohyuki@student.42seoul.kr>     +#+  +:+       +#+        */
+/*   By: seohyuki <seohyuki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/14 13:37:09 by seohyuki          #+#    #+#             */
-/*   Updated: 2022/05/15 01:35:22 by seohyuki         ###   ########.fr       */
+/*   Updated: 2022/05/15 16:44:09 by seohyuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,12 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	new = (char *)malloc(sizeof(char) * (len + 1));
 	if (!new)
 		return (NULL);
-
 	i = 0;
 	while (i < len)
 	{
 		new[i] = f(i, s[i]);
 		i++;
 	}
+	new[i] = '\0';
 	return (new);
 }
