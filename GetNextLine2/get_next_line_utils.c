@@ -6,7 +6,7 @@
 /*   By: seohyuki <seohyuki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 22:29:19 by seohyuki          #+#    #+#             */
-/*   Updated: 2022/08/15 16:07:41 by seohyuki         ###   ########.fr       */
+/*   Updated: 2022/08/15 16:22:40 by seohyuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,26 +67,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		}
 	}
 	return (dst);
-}
-
-char	*update_string(char *str, unsigned int idx)
-{
-	size_t	len;
-	char	*new;
-
-	len = ft_strlen(str);
-	if (len > (size_t)idx + 1)
-	{
-		new = ft_strjoin(str + idx + 1, "");
-		free(str);
-		str = new;
-	}
-	else
-	{
-		free(str);
-		str = NULL;
-	}
-	return (str);
 }
 
 char	*ft_strchr(const char *s, int c)

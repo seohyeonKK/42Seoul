@@ -6,20 +6,21 @@
 /*   By: seohyuki <seohyuki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 22:29:17 by seohyuki          #+#    #+#             */
-/*   Updated: 2022/08/15 16:09:28 by seohyuki         ###   ########.fr       */
+/*   Updated: 2022/08/15 16:24:46 by seohyuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-char	*get_line(int fd, char **str, unsigned int *idx)
+char	*get_line(int fd, char **str)
 {
 	char	*line;
 	char	buf[BUFFER_SIZE + 1];
 	char	*old;
 	int		byte;
+	int		idx;
 
-	*idx = 0;
+	idx = 0;
 	if (!*str || !ft_strlen(*str))
 		return (0);
 	byte = 1;
@@ -31,14 +32,36 @@ char	*get_line(int fd, char **str, unsigned int *idx)
 		*str = ft_strjoin(*str, buf);
 		free(old);
 	}
-	while ((*str)[*idx] != '\n' && (*str)[*idx] != '\0')
-		(*idx)++;
-	line = (char *)malloc(sizeof(char) * ((*idx) + 2));
-	if (!line)
-		return (0);
-	ft_memmove(line, *str, (*idx) + 1);
-	line[*idx + 1] = '\0';
+	while ((*str)[idx] != '\n' && (*str)[idx] != '\0')
+		(idx)++;
+	line = (char *)malloc(sizeof(char) * ((idx) + 2));
+	ft_memmove(line, *str, (idx) + 1);
+	line[idx + 1] = '\0';
 	return (line);
+}
+
+char	*update_string(char *str)
+{
+	size_t			len;
+	char			*new;
+	unsigned int	idx;
+
+	idx = 0;
+	while (str[idx] != '\n' && str[idx] != '\0')
+		(idx)++;
+	len = ft_strlen(str);
+	if (len > (size_t)idx + 1)
+	{
+		new = ft_strjoin(str + idx + 1, "");
+		free(str);
+		str = new;
+	}
+	else
+	{
+		free(str);
+		str = NULL;
+	}
+	return (str);
 }
 
 char	*get_next_line(int fd)
@@ -47,7 +70,6 @@ char	*get_next_line(int fd)
 	char			buf[BUFFER_SIZE + 1];
 	int				byte;
 	char			*line;
-	unsigned int	idx;
 	char			*old;
 
 	if (BUFFER_SIZE <= 0)
@@ -56,18 +78,15 @@ char	*get_next_line(int fd)
 	if (byte == -1 || (byte == 0 && str == NULL))
 		return (0);
 	buf[byte] = '\0';
-	if (byte)
+	if (byte && str)
 	{
-		if (!str)
-			str = ft_strjoin("", buf);
-		else
-		{
-			old = str;
-			str = ft_strjoin(str, buf);
-			free(old);
-		}
+		old = str;
+		str = ft_strjoin(str, buf);
+		free(old);
 	}
-	line = get_line(fd, &str, &idx);
-	str = update_string(str, idx);
+	if (byte && !str)
+		str = ft_strjoin("", buf);
+	line = get_line(fd, &str);
+	str = update_string(str);
 	return (line);
 }
