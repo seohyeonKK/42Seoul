@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seohyuki <seohyuki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 22:29:17 by seohyuki          #+#    #+#             */
-/*   Updated: 2022/08/15 16:28:50 by seohyuki         ###   ########.fr       */
+/*   Updated: 2022/08/15 16:38:06 by seohyuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ char	*update_string(char *str)
 
 char	*get_next_line(int fd)
 {
-	static char		*str;
+	static char		*str[OPEN_MAX];
 	char			buf[BUFFER_SIZE + 1];
 	int				byte;
 	char			*line;
@@ -75,18 +75,18 @@ char	*get_next_line(int fd)
 	if (BUFFER_SIZE <= 0)
 		return (0);
 	byte = read(fd, buf, BUFFER_SIZE);
-	if (byte == -1 || (byte == 0 && str == NULL))
+	if (byte == -1 || (byte == 0 && str[fd] == NULL))
 		return (0);
 	buf[byte] = '\0';
-	if (byte && str)
+	if (byte && str[fd])
 	{
-		old = str;
-		str = ft_strjoin(str, buf);
+		old = str[fd];
+		str[fd] = ft_strjoin(str[fd], buf);
 		free(old);
 	}
-	if (byte && !str)
-		str = ft_strjoin("", buf);
-	line = get_line(fd, &str);
-	str = update_string(str);
+	if (byte && !str[fd])
+		str[fd] = ft_strjoin("", buf);
+	line = get_line(fd, &str[fd]);
+	str[fd] = update_string(str[fd]);
 	return (line);
 }
