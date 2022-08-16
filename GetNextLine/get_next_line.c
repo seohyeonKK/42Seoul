@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seohyuki <seohyuki@student.42seoul.kr>     +#+  +:+       +#+        */
+/*   By: seohyuki <seohyuki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 22:29:17 by seohyuki          #+#    #+#             */
-/*   Updated: 2022/08/15 16:28:50 by seohyuki         ###   ########.fr       */
+/*   Updated: 2022/08/16 12:34:25 by seohyuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*get_line(int fd, char **str)
 	if (!*str || !ft_strlen(*str))
 		return (0);
 	byte = 1;
-	while (!ft_strchr(*str, '\n') && byte)
+	while (!ft_strchr(*str, '\n') && byte > 0)
 	{
 		byte = read(fd, buf, BUFFER_SIZE);
 		buf[byte] = '\0';
@@ -72,7 +72,7 @@ char	*get_next_line(int fd)
 	char			*line;
 	char			*old;
 
-	if (BUFFER_SIZE <= 0)
+	if (BUFFER_SIZE <= 0 || fd < 0)
 		return (0);
 	byte = read(fd, buf, BUFFER_SIZE);
 	if (byte == -1 || (byte == 0 && str == NULL))
