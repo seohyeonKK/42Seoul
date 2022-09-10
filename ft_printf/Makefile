@@ -6,7 +6,7 @@
 #    By: seohyuki <seohyuki@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/09 21:38:00 by seohyuki          #+#    #+#              #
-#    Updated: 2022/09/10 22:01:15 by seohyuki         ###   ########.fr        #
+#    Updated: 2022/09/10 22:33:28 by seohyuki         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ CFLAGS=-Wall -Wextra -Werror
 
 HEADER=ft_printf.h
 
-SRCS=ft_printf.c
+SRCS=ft_printf.c ft_print_char.c ft_print_hex.c ft_print_int.c ft_print_pointer.c ft_print_string.c ft_print_unsigned.c
 OBJS=$(SRCS:.c=.o)
 
 NAME=libftprintf.a
