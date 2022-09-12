@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: seohyuki <seohyuki@student.42seoul.kr>     +#+  +:+       +#+         #
+#    By: seohyeon <seohyeon@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/09 21:38:00 by seohyuki          #+#    #+#              #
-#    Updated: 2022/09/10 22:33:28 by seohyuki         ###   ########.fr        #
+#    Updated: 2022/09/12 19:57:43 by seohyeon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,4 +34,4 @@ fclean: clean
 	rm -f $(NAME)
 re: fclean all
 
-.PHONY: all clean fclean re bonus
+.PHONY: all clean fclean re
