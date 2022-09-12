@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seohyuki <seohyuki@student.42seoul.kr>     +#+  +:+       +#+        */
+/*   By: seohyeon <seohyeon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 17:58:11 by seohyuki          #+#    #+#             */
-/*   Updated: 2022/09/10 22:30:45 by seohyuki         ###   ########.fr       */
+/*   Updated: 2022/09/12 19:58:22 by seohyeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,6 @@ int	ft_printf(const	char *str, ...)
 			length += ft_print_char(*str);
 		str++;
 	}
+	va_end(ap);
 	return (length);
 }

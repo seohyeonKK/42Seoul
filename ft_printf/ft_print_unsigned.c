@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_unsigned.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seohyuki <seohyuki@student.42seoul.kr>     +#+  +:+       +#+        */
+/*   By: seohyeon <seohyeon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/10 22:19:01 by seohyuki          #+#    #+#             */
-/*   Updated: 2022/09/10 22:19:19 by seohyuki         ###   ########.fr       */
+/*   Updated: 2022/09/12 19:58:36 by seohyeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,7 @@ int	ft_putnbr_unsigned_fd(unsigned int n)
 	length = 0;
 	if (n / 10 != 0)
 		length += ft_putnbr_fd(n / 10);
-	if (n / 10 == 0 && n < 0)
-		length += ft_print_char('-');
 	n = n % 10;
-	if (n < 0)
-		n *= (-1);
 	length += ft_print_char(n + '0');
 	return (length);
 }

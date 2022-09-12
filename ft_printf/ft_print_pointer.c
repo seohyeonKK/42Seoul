@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_pointer.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seohyuki <seohyuki@student.42seoul.kr>     +#+  +:+       +#+        */
+/*   By: seohyeon <seohyeon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/10 22:15:53 by seohyuki          #+#    #+#             */
-/*   Updated: 2022/09/10 22:35:40 by seohyuki         ###   ########.fr       */
+/*   Updated: 2022/09/12 19:59:27 by seohyeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putnbr_pointer_fd(unsigned long n)
+int	ft_putnbr_pointer_fd(size_t n)
 {
 	int	length;
 
@@ -27,7 +27,7 @@ int	ft_putnbr_pointer_fd(unsigned long n)
 	return (length);
 }
 
-int	ft_print_pointer(unsigned long ptr)
+int	ft_print_pointer(size_t ptr)
 {
 	int	length;
 
