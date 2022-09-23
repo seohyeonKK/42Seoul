@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minitalk.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seohyuki <seohyuki@student.42seoul.kr>     +#+  +:+       +#+        */
+/*   By: seohyuki <seohyuki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 17:50:10 by seohyuki          #+#    #+#             */
-/*   Updated: 2022/09/23 18:17:15 by seohyuki         ###   ########.fr       */
+/*   Updated: 2022/09/23 20:16:54 by seohyuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,11 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include "ft_printf.h"
+
+typedef struct s_info{
+	int	count;
+	int	letter;
+}	t_info;
 
 int	ft_atoi(const char *str);
 int	check_invalid(long answer, long tmp);
