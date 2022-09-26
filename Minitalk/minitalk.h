@@ -6,7 +6,7 @@
 /*   By: seohyuki <seohyuki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 17:50:10 by seohyuki          #+#    #+#             */
-/*   Updated: 2022/09/23 20:16:54 by seohyuki         ###   ########.fr       */
+/*   Updated: 2022/09/26 18:04:50 by seohyuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include "ft_printf.h"
+
+#define BITLEN 8
 
 typedef struct s_info{
 	int	count;

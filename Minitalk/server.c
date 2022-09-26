@@ -6,7 +6,7 @@
 /*   By: seohyuki <seohyuki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 17:51:54 by seohyuki          #+#    #+#             */
-/*   Updated: 2022/09/23 20:27:57 by seohyuki         ###   ########.fr       */
+/*   Updated: 2022/09/26 21:05:13 by seohyuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,10 +43,10 @@ void	get_signal(int signum)
 	}
 	if (signum == SIGUSR2)
 	{
-		g_info.letter += 1 << g_info.count;
+		g_info.letter += (1 << g_info.count);
 		g_info.count++;
 	}
-	if (g_info.count == 12)
+	if (g_info.count == BITLEN)
 	{
 		ft_printf("%c", g_info.letter);
 		g_info.count = 0;
