@@ -6,7 +6,7 @@
 #    By: seohyuki <seohyuki@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/29 00:31:19 by seohyuki          #+#    #+#              #
-#    Updated: 2022/09/29 02:35:41 by seohyuki         ###   ########.fr        #
+#    Updated: 2022/09/29 02:50:58 by seohyuki         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,21 +45,25 @@ else
 	C_SRCS =  $(CLIENT_SRCS) $(OTHER_SRCS)
 endif
 
-.c.o: $(HEADER)
+all: client server
+
+.c.o: $(HEADER) $(S_SRCS) $(C_SRCS)
 	$(CC) $(CFLAGS) -c $(S_SRCS) $(C_SRCS)
 
-client: $(C_OBJECTS)
+client: $(C_OBJECTS) $(OTHER_OBJS)
 	$(CC) $(C_OBJECTS) -o $(CLIENT)
 
-server: $(S_OBJECTS)
+server: $(S_OBJECTS) $(OTHER_OBJS)
 	$(CC) $(S_OBJECTS) -o $(SERVER)
 
-all: client server
 clean:
 	rm -f $(S_OBJECTS) $(C_OBJECTS)
+
 fclean: clean
 	rm -f $(CLIENT) $(SERVER)
+
 re: fclean all
+
 bonus:
 	make BONUS=1
 
