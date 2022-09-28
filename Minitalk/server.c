@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   server.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seohyuki <seohyuki@student.42.fr>          +#+  +:+       +#+        */
+/*   By: seohyuki <seohyuki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 17:51:54 by seohyuki          #+#    #+#             */
-/*   Updated: 2022/09/26 21:05:13 by seohyuki         ###   ########.fr       */
+/*   Updated: 2022/09/29 00:09:49 by seohyuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,24 @@
 
 t_info	g_info;
 
-void	get_signal(int signum);
+void	get_signal(int signum, siginfo_t *info, void *ucontext);
+void	print_letter(int signum);
+void	error_exit(void);
 
 int	main(void)
 {
 	struct sigaction	sa;
 	int					pid;
 
-	sa.sa_handler = get_signal;
+	sa.sa_flags = SA_SIGINFO;
+	sa.sa_sigaction = get_signal;
 	pid = getpid();
+	g_info.c_pid = -1;
 	g_info.count = 0;
 	g_info.letter = 0;
-	ft_printf("%d", pid);
+	g_info.pid = pid;
+	g_info.signal_cnt = 0;
+	ft_printf("server pid = %d\n", pid);
 	while (1)
 	{
 		sigaction(SIGUSR1, &sa, NULL);
@@ -35,21 +41,49 @@ int	main(void)
 	return (0);
 }
 
-void	get_signal(int signum)
+void	get_signal(int signum, siginfo_t *info, void *ucontext)
+{
+	if (g_info.c_pid == -1)
+	{
+		g_info.c_pid = info->si_pid;
+		g_info.signal_cnt = 0;
+		ft_printf("client %d and server %d", g_info.c_pid, g_info.pid);
+		ft_printf(" connected!\n");
+		print_letter(signum);
+	}
+	else if (g_info.c_pid == info->si_pid)
+		print_letter(signum);
+}
+
+void	print_letter(int signum)
 {
 	if (signum == SIGUSR1)
-	{
 		g_info.count++;
-	}
-	if (signum == SIGUSR2)
+	else if (signum == SIGUSR2)
 	{
 		g_info.letter += (1 << g_info.count);
 		g_info.count++;
 	}
+	g_info.signal_cnt++;
+	if (kill(g_info.c_pid, SIGUSR1) != 0)
+		error_exit();
 	if (g_info.count == BITLEN)
 	{
-		ft_printf("%c", g_info.letter);
+		if (g_info.letter == 0)
+		{
+			ft_printf("\n");
+			ft_printf("server recieved %d signals\n", g_info.signal_cnt);
+			g_info.c_pid = -1;
+		}
+		else
+			ft_printf("%c", g_info.letter);
 		g_info.count = 0;
 		g_info.letter = 0;
 	}
+}
+
+void	error_exit(void)
+{
+	ft_printf("server error\n");
+	exit(1);
 }
