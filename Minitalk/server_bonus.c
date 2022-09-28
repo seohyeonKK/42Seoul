@@ -6,7 +6,7 @@
 /*   By: seohyuki <seohyuki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 17:51:54 by seohyuki          #+#    #+#             */
-/*   Updated: 2022/09/29 01:56:40 by seohyuki         ###   ########.fr       */
+/*   Updated: 2022/09/29 00:09:49 by seohyuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ int	main(void)
 
 void	get_signal(int signum, siginfo_t *info, void *ucontext)
 {
-	(void)ucontext;
 	if (g_info.c_pid == -1)
 	{
 		g_info.c_pid = info->si_pid;

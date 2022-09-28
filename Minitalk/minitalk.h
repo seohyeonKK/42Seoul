@@ -6,7 +6,7 @@
 /*   By: seohyuki <seohyuki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 17:50:10 by seohyuki          #+#    #+#             */
-/*   Updated: 2022/09/28 20:33:18 by seohyuki         ###   ########.fr       */
+/*   Updated: 2022/09/29 01:58:00 by seohyuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,6 @@ typedef struct s_info{
 	int	signal_cnt;
 }	t_info;
 
-int	ft_atoi(const char *str);
-int	check_invalid(long answer, long tmp);
-int	ft_initialize(const char *str, int *sign);
-int	ft_isspace(const char ch);
-void	error_exit(void);
+int		ft_atoi(const char *str);
 
 #endif
