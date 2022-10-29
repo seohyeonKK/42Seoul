@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+<!-- saved from url=(0091)https://hi0seon.tistory.com/entry/42SeoulCub3d-1-cub3d-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0 -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="./[42Seoul_Cub3d] #1 cub3d 시작하기_files/lightbox.min.css"><link rel="stylesheet" type="text/css" href="./[42Seoul_Cub3d] #1 cub3d 시작하기_files/font.css"><link rel="stylesheet" type="text/css" href="./[42Seoul_Cub3d] #1 cub3d 시작하기_files/content.css"><!--[if lt IE 9]><script src="https://t1.daumcdn.net/tistory_admin/lib/jquery/jquery-1.12.4.min.js"></script><![endif]--><!--[if gte IE 9]>
+<!--><script src="./[42Seoul_Cub3d] #1 cub3d 시작하기_files/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script><!--<![endif]-->
+<script src="./[42Seoul_Cub3d] #1 cub3d 시작하기_files/lightbox.min.js"></script>
+<script>
+lightbox.options.fadeDuration = 200;
+lightbox.options.resizeDuration = 200;
+lightbox.options.wrapAround = false;
+lightbox.options.albumLabel = "%1 / %2";
+</script>
+<script>var tjQuery = jQuery.noConflict(true);</script><style type="text/css">.tt_article_useless_p_margin p {padding-top:0 !important;padding-bottom:0 !important;margin-top:0 !important;margin-bottom:0 !important;}</style><meta name="referrer" content="always"><link rel="icon" href="https://t1.daumcdn.net/tistory_admin/static/top/favicon_0630.ico"><link rel="apple-touch-icon" href="https://img1.daumcdn.net/thumb/C180x180/?fname=https%3A%2F%2Ftistory4.daumcdn.net%2Ftistory%2F3499314%2Fattach%2F6fbc2fe530d44ec8bf149f270cefe7c1">
+<link rel="apple-touch-icon" sizes="76x76" href="https://img1.daumcdn.net/thumb/C76x76/?fname=https%3A%2F%2Ftistory4.daumcdn.net%2Ftistory%2F3499314%2Fattach%2F6fbc2fe530d44ec8bf149f270cefe7c1">
+<link rel="apple-touch-icon" sizes="120x120" href="https://img1.daumcdn.net/thumb/C120x120/?fname=https%3A%2F%2Ftistory4.daumcdn.net%2Ftistory%2F3499314%2Fattach%2F6fbc2fe530d44ec8bf149f270cefe7c1">
+<link rel="apple-touch-icon" sizes="152x152" href="https://img1.daumcdn.net/thumb/C152x152/?fname=https%3A%2F%2Ftistory4.daumcdn.net%2Ftistory%2F3499314%2Fattach%2F6fbc2fe530d44ec8bf149f270cefe7c1">
+<meta name="google-adsense-platform-account" content="ca-host-pub-9691043933427338">
+<meta name="google-adsense-platform-domain" content="tistory.com">
+<meta name="google-adsense-account" content="ca-pub-8219658684250722"><meta name="description" content="큡삼디는 기본적으로 컴퓨터그래픽을 이용?하는 프로젝트인데, 인트라에 있는 subject 파일만 보고서는 감이 안와서 ft_server 평가받을 때 이미 하셨던 분들한테 물어봤는데 인트라에 서브젝트 파일과 같이 라이..">
+
+<!-- BEGIN OPENGRAPH -->
+<link rel="canonical" href="https://hi0seon.tistory.com/entry/42SeoulCub3d-1-cub3d-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0"><meta property="og:type" content="article"><meta property="og:url" content="https://hi0seon.tistory.com/entry/42SeoulCub3d-1-cub3d-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0"><meta property="og:article:author" content="hi._.0seon"><meta property="og:site_name" content="Hi yoahn 개발블로그"><meta property="og:title" content="[42Seoul/Cub3d] #1 cub3d 시작하기"><meta name="by" content="hi._.0seon"><meta property="og:description" content="큡삼디는 기본적으로 컴퓨터그래픽을 이용?하는 프로젝트인데, 인트라에 있는 subject 파일만 보고서는 감이 안와서 ft_server 평가받을 때 이미 하셨던 분들한테 물어봤는데 인트라에 서브젝트 파일과 같이 라이.."><meta property="og:image" content="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FVsEqn%2FbtqZ1J5nJtM%2FkyNIAHC0zuUz6wEIs3Ymjk%2Fimg.png">
+<!-- END OPENGRAPH -->
+
+
+
+<!-- BEGIN TWITTERCARD -->
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@TISTORY"><meta name="twitter:title" content="[42Seoul/Cub3d] #1 cub3d 시작하기"><meta name="twitter:description" content="큡삼디는 기본적으로 컴퓨터그래픽을 이용?하는 프로젝트인데, 인트라에 있는 subject 파일만 보고서는 감이 안와서 ft_server 평가받을 때 이미 하셨던 분들한테 물어봤는데 인트라에 서브젝트 파일과 같이 라이.."><meta property="twitter:image" content="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FVsEqn%2FbtqZ1J5nJtM%2FkyNIAHC0zuUz6wEIs3Ymjk%2Fimg.png">
+<!-- END TWITTERCARD -->
+
+
+
+<!-- BEGIN DAUMAPP -->
+<meta property="dg:plink" content="https://hi0seon.tistory.com/129"><meta name="plink" content="https://hi0seon.tistory.com/129"><meta name="title" content="[42Seoul/Cub3d] #1 cub3d 시작하기"><meta name="article:media_name" content="Hi yoahn 개발블로그"><meta property="article:mobile_url" content="https://hi0seon.tistory.com/m/entry/42SeoulCub3d-1-cub3d-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0"><meta property="article:pc_url" content="https://hi0seon.tistory.com/entry/42SeoulCub3d-1-cub3d-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0"><meta property="article:mobile_view_url" content="https://hi0seon.tistory.com/m/entry/42SeoulCub3d-1-cub3d-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0"><meta property="article:pc_view_url" content="https://hi0seon.tistory.com/entry/42SeoulCub3d-1-cub3d-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0"><meta property="article:talk_channel_view_url" content="https://hi0seon.tistory.com/m/entry/42SeoulCub3d-1-cub3d-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0"><meta property="article:pc_service_home" content="https://www.tistory.com"><meta property="article:mobile_service_home" content="https://www.tistory.com/m"><meta property="article:txid" content="3499314_129"><meta property="article:published_time" content="2021-03-12T17:21:23+09:00"><meta property="og:regDate" content="20210312172123"><meta property="article:modified_time" content="2021-03-27T18:57:21+09:00">
+<!-- END DAUMAPP -->
+
+
+
+<!-- BEGIN STRUCTURED_DATA -->
+<script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"BlogPosting","mainEntityOfPage":{"@id":"https:\/\/hi0seon.tistory.com\/entry\/42SeoulCub3d-1-cub3d-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0"},"url":"https:\/\/hi0seon.tistory.com\/entry\/42SeoulCub3d-1-cub3d-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0","headline":"[42Seoul\/Cub3d] #1 cub3d \uc2dc\uc791\ud558\uae30","description":"\ud061\uc0bc\ub514\ub294 \uae30\ubcf8\uc801\uc73c\ub85c \ucef4\ud4e8\ud130\uadf8\ub798\ud53d\uc744 \uc774\uc6a9?\ud558\ub294 \ud504\ub85c\uc81d\ud2b8\uc778\ub370, \uc778\ud2b8\ub77c\uc5d0 \uc788\ub294 subject \ud30c\uc77c\ub9cc \ubcf4\uace0\uc11c\ub294 \uac10\uc774 \uc548\uc640\uc11c ft_server \ud3c9\uac00\ubc1b\uc744 \ub54c \uc774\ubbf8 \ud558\uc168\ub358 \ubd84\ub4e4\ud55c\ud14c \ubb3c\uc5b4\ubd24\ub294\ub370 \uc778\ud2b8\ub77c\uc5d0 \uc11c\ube0c\uc81d\ud2b8 \ud30c\uc77c\uacfc \uac19\uc774 \ub77c\uc774..","author":{"@type":"Person","name":"hi._.0seon"},"image":{"@type":"ImageObject","url":"https:\/\/img1.daumcdn.net\/thumb\/R800x0\/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FVsEqn%2FbtqZ1J5nJtM%2FkyNIAHC0zuUz6wEIs3Ymjk%2Fimg.png","width":"800px","height":"800px"},"datePublished":"20210312T17:21:23+09:00","dateModified":"20210327T18:57:21+09:00","publisher":{"@type":"Organization","name":"TISTORY","logo":{"@type":"ImageObject","url":"https:\/\/t1.daumcdn.net\/tistory_admin\/static\/images\/openGraph\/opengraph.png","width":"800px","height":"800px"}}}</script><meta name="robots" content="max-image-preview:large">
+<!-- END STRUCTURED_DATA -->
+
+        <script data-ad-host="ca-host-pub-9691043933427338" data-ad-client="ca-pub-8219658684250722" async="" src="./[42Seoul_Cub3d] #1 cub3d 시작하기_files/f.txt"></script>
+	
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+	<title>[42Seoul/Cub3d] #1 cub3d 시작하기</title>
+	<link rel="alternate" type="application/rss+xml" title="Hi yoahn 개발블로그" href="https://hi0seon.tistory.com/rss">
+
+	<link rel="stylesheet" href="./[42Seoul_Cub3d] #1 cub3d 시작하기_files/style.css">
+	<link rel="stylesheet" href="./[42Seoul_Cub3d] #1 cub3d 시작하기_files/font(1).css">
+	<style>
+		
+		.wrap_sub {
+			background-image: url('https://t1.daumcdn.net/tistory/0/Ray2/images/header_default.jpg');
+		}
+		
+	</style>
+
+	<!--[if lt IE 9]>
+	<script src="//t1.daumcdn.net/tistory_admin/lib/jquery/jquery-1.12.4.min.js"></script>
+	<![endif]-->
+	<!--[if gte IE 9]><!-->
+	<script src="./[42Seoul_Cub3d] #1 cub3d 시작하기_files/jquery-3.2.1.min.js"></script>
+	<!--<![endif]-->
+	<meta name="naver-site-verification" content="7299987fb8e7b89f76b6d27857b9df5dc3babee6">
+<meta http-equiv="imagetoolbar" content="no"><!-- BEGIN GOOGLE_SITE_VERIFICATION -->
+<meta name="google-site-verification" content="OUtcdUWqAegxdo9wz8KgR1h_ZUGGpVq9BBtcHDcaCv4">
+<!-- END GOOGLE_SITE_VERIFICATION -->
+<style type="text/css">
+		#daumSearchBox {
+			height: 21px;
+			background-image : url(//i1.daumcdn.net/imgsrc.search/search_all/show/tistory/plugin/bg_search2_2.gif);
+			margin: 5px auto ;
+			padding: 0;
+		}
+		#daumSearchBox input {
+			background: none;
+			margin : 0;
+			padding : 0;
+			border : 0;
+		}
+		#daumSearchBox #daumLogo {
+			width: 34px;
+			height: 21px;
+			float: left;
+			margin-right: 5px;
+			background-image : url(//i1.daumcdn.net/img-media/tistory/img/bg_search1_2_2010ci.gif);
+		}
+		#daumSearchBox #show_q {
+			background-color: transparent;
+			border: none;
+			font: 12px Gulim, Sans-serif;
+			color: #555;
+			margin-top: 4px;
+			margin-right: 15px;
+			float: left;
+		}
+
+		#daumSearchBox #show_btn {
+			background-image : url(//i1.daumcdn.net/imgsrc.search/search_all/show/tistory/plugin/bt_search_2.gif);
+			width: 37px;
+			height: 21px;
+			float: left;
+			margin:0;
+			cursor:pointer;
+			text-indent:-1000em;
+		}
+	</style>
+<link rel="stylesheet" type="text/css" href="./[42Seoul_Cub3d] #1 cub3d 시작하기_files/style(1).css">
+<script type="text/javascript" src="./[42Seoul_Cub3d] #1 cub3d 시작하기_files/profile.js"></script>
+	<style type="text/css">
+		.another_category { border: 1px solid #E5E5E5; padding: 10px 10px 5px; margin:10px 0; clear: both; }
+		.another_category h4 { font-size: 12px !important; margin: 0 !important; border-bottom: 1px solid #E5E5E5 !important; padding: 2px 0 6px !important; }
+		.another_category h4 a { font-weight: bold !important; }
+		.another_category table { table-layout: fixed; border-collapse: collapse; width: 100% !important; margin-top: 10px !important; }
+		* html .another_category table { width: auto !important; }
+		*:first-child+html .another_category table { width: auto !important; }
+		.another_category th, .another_category td { padding: 0 0 4px !important; }
+		.another_category th { text-align: left; font-size: 12px !important; font-weight: normal;  word-break: break-all; overflow: hidden; line-height: 1.5; }
+		.another_category td { text-align: right; width: 80px; font-size: 11px; }
+		.another_category th a { font-weight: normal; text-decoration: none; border: none !important; }
+		.another_category th a.current{ font-weight: bold; text-decoration: none !important; border-bottom: 1px solid !important; }
+		.another_category th span { font-weight: normal; text-decoration: none; font: 10px Tahoma, Sans-serif; border: none !important; }
+
+		.another_category_color_gray, .another_category_color_gray h4 { border-color: #E5E5E5 !important; }
+		.another_category_color_gray * { color: #909090 !important; }
+		.another_category_color_gray th a.current{border-color:#909090 !important;}
+		.another_category_color_gray h4, .another_category_color_gray h4 a { color: #737373 !important; }
+
+
+		.another_category_color_red, .another_category_color_red h4 { border-color: #F6D4D3 !important;  }
+		.another_category_color_red * { color: #E86869 !important; }
+		.another_category_color_red th a.current{border-color:#E86869 !important;}
+		.another_category_color_red h4, .another_category_color_red h4 a { color: #ED0908 !important; }
+
+
+		.another_category_color_green, .another_category_color_green h4 { border-color: #CCE7C8 !important; }
+		.another_category_color_green * { color: #64C05B !important; }
+		.another_category_color_green th a.current{border-color:#64C05B !important;}
+		.another_category_color_green h4, .another_category_color_green h4 a { color: #3EA731 !important; }
+
+
+		.another_category_color_blue, .another_category_color_blue h4 { border-color: #C8DAF2 !important; }
+		.another_category_color_blue * { color: #477FD6 !important; }
+		.another_category_color_blue th a.current{border-color:#477FD6 !important;}
+		.another_category_color_blue h4, .another_category_color_blue h4 a { color: #1960CA !important; }
+
+
+		.another_category_color_violet, .another_category_color_violet h4 { border-color: #E1CEEC !important;  }
+		.another_category_color_violet * { color:#9D64C5 !important; }
+		.another_category_color_violet th a.current{border-color:#9D64C5 !important;}
+		.another_category_color_violet h4, .another_category_color_violet h4 a { color: #7E2CB5 !important; }
+	</style>
+<script type="text/javascript">
+        
+        window.TistoryBlog = {
+            basePath: "",
+            url: "https://hi0seon.tistory.com",
+            tistoryUrl: "https://hi0seon.tistory.com",
+			manageUrl: 'https://hi0seon.tistory.com/manage',
+            token: 'zdHYrFz5jhFMzejQfopSxg=='
+        };
+        var servicePath = "";
+        var blogURL = "";
+    </script>
+
+	<script> (function() { window.orgjQuery = window.jQuery; window.jQuery = tjQuery })()</script>
+    <script type="text/javascript" defer="" src="./[42Seoul_Cub3d] #1 cub3d 시작하기_files/reaction-button-container.min.js"></script>
+    <script> (function() { window.jQuery = window.orgjQuery; delete window.orgjQuery })()</script>
+        <script type="text/javascript" src="./[42Seoul_Cub3d] #1 cub3d 시작하기_files/base.js"></script>
+        <link rel="stylesheet" type="text/css" href="./[42Seoul_Cub3d] #1 cub3d 시작하기_files/dialog.css">
+            <link rel="stylesheet" type="text/css" href="./[42Seoul_Cub3d] #1 cub3d 시작하기_files/font(2).css">
+    <link rel="stylesheet" type="text/css" href="./[42Seoul_Cub3d] #1 cub3d 시작하기_files/postBtn.css">
+        <link rel="stylesheet" type="text/css" href="./[42Seoul_Cub3d] #1 cub3d 시작하기_files/tistory.css">
+    <script type="text/javascript" src="./[42Seoul_Cub3d] #1 cub3d 시작하기_files/tistory.js"></script>
+        <script type="text/javascript" src="./[42Seoul_Cub3d] #1 cub3d 시작하기_files/kakao.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="./[42Seoul_Cub3d] #1 cub3d 시작하기_files/revenue.css"></head>
+
+<body id="tt-body-page">
+<script type="text/javascript">
+	(function() {
+		if (!window.T) {
+			window.T = {}
+		}
+		window.T.config = {"TOP_SSL_URL":"https:\/\/www.tistory.com","PREVIEW":false,"ROLE":"guest","PREV_PAGE":"\/entry\/\uc18c\ud504\ud2b8\uc6e8\uc5b4-\uacf5\ud559-\uc720\uc2a4\ucf00\uc774\uc2a4-\ub2e4\uc774\uc5b4\uadf8\ub7a8","NEXT_PAGE":"\/entry\/Xcode-iOS-File-Cocoa-Touch-Class-Swift-File","BLOG":{"isDormancy":false,"title":"Hi yoahn \uac1c\ubc1c\ube14\ub85c\uadf8"},"NEED_COMMENT_LOGIN":false,"COMMENT_LOGIN_CONFIRM_MESSAGE":"","LOGIN_URL":"https:\/\/www.tistory.com\/auth\/login\/?redirectUrl=http%3A%2F%2Fhi0seon.tistory.com%2Fentry%2F42SeoulCub3d-1-cub3d-%25EC%258B%259C%25EC%259E%2591%25ED%2595%2598%25EA%25B8%25B0","DEFAULT_URL":"https:\/\/hi0seon.tistory.com","USER":{"name":null,"homepage":null},"ROLE_GROUP":"visitor","SUBSCRIPTION":{"status":"none","isConnected":false,"isProcessing":false,"isPending":false,"isWait":false,"isNone":true},"IS_LOGIN":false,"HAS_BLOG":false,"TOP_URL":"https:\/\/www.tistory.com","JOIN_URL":"https:\/\/www.tistory.com\/member\/join"};
+		window.appInfo = {"domain":"tistory.com","topUrl":"https:\/\/www.tistory.com","loginUrl":"https:\/\/www.tistory.com\/auth\/login","logoutUrl":"https:\/\/www.tistory.com\/auth\/logout"};
+
+        window.initData = {};
+        
+	})();
+</script>
+
+<script type="text/javascript" src="./[42Seoul_Cub3d] #1 cub3d 시작하기_files/common.js"></script>
+<div style="margin:0; padding:0; border:none; background:none; float:none; clear:none; z-index:0"></div>
+
+	<div id="dkIndex">
+		<!--웹접근성용 바로가기 링크 모음-->
+		<a href="https://hi0seon.tistory.com/entry/42SeoulCub3d-1-cub3d-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0#dkBody">본문 바로가기</a>
+	</div>
+	<div id="dkWrap" class="wrap_skin">
+		<!-- 카테고리버튼 클릭시 'navi_on' 클래스 부여 -->
+		<div id="dkHead" role="banner" class="area_head">
+			<h1 class="screen_out">Hi yoahn 개발블로그</h1>
+			<button type="button" class="btn_cate">
+				<span class="ico_skin ico_cate">카테고리</span>
+			</button>
+			<div class="area_search ">
+				<button type="button" class="btn_search">
+					<span class="ico_skin ico_search">검색하기</span>
+				</button>
+				
+					<form action="https://hi0seon.tistory.com/entry/42SeoulCub3d-1-cub3d-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0#" method="get" class="frm_search box_search" onsubmit="try{window.location.href=&#39;/search/&#39;+looseURIEncode(document.getElementsByName(&#39;search&#39;)[0].value);document.getElementsByName(&#39;search&#39;)[0].value=&#39;&#39;;return false;}catch(e){}">
+						<fieldset>
+							<legend class="screen_out">검색하기</legend>
+							<label for="search" class="lab_search screen_out">Search</label>
+							<input type="text" name="search" id="search" class="tf_search" placeholder="Search" value="" data-value="">
+							<span class="ico_skin ico_search"></span>
+						</fieldset>
+					</form>
+				
+			</div>
+			<div class="area_profile">
+				<div class="tit_post">
+					<a href="https://hi0seon.tistory.com/" class="link_post">Hi yoahn 개발블로그</a>
+				</div>
+				<span class="thumb_profile">
+                <img src="./[42Seoul_Cub3d] #1 cub3d 시작하기_files/6fbc2fe530d44ec8bf149f270cefe7c1" class="img_profile" alt="프로필사진">
+            </span>
+				<span class="txt_profile">hi._.0seon</span>
+			</div>
+		</div>
+		<hr class="hide">
+		<div id="dkContent" class="cont_skin" role="main">
+			<div id="cMain">
+				<div id="mFeature" class="wrap_sub">
+					<div class="cont_sub">
+						<div class="inner_sub">
+							<div class="area_sub">
+								<div role="navigation" class="area_navi">
+									<ul class="tt_category">
+	<li class="">
+		<a class="link_tit" href="https://hi0seon.tistory.com/category">
+			Computer Engineering							<span class="c_cnt">(149)</span>
+			
+					</a>
+
+				<ul class="category_list">
+							<li class="">
+					<a class="link_item" href="https://hi0seon.tistory.com/category/sswu">
+						sswu													<span class="c_cnt">(22)</span>
+						
+											</a>
+
+										<ul class="sub_category_list">
+													<li class="">
+								<a class="link_sub_item" href="https://hi0seon.tistory.com/category/sswu/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%96%B8%EC%96%B4%EB%A1%A0">
+									프로그래밍언어론
+																			<span class="c_cnt">(4)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="https://hi0seon.tistory.com/category/sswu/%EC%BB%B4%ED%93%A8%ED%84%B0%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC">
+									컴퓨터네트워크
+																			<span class="c_cnt">(10)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="https://hi0seon.tistory.com/category/sswu/%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5">
+									인공지능
+																			<span class="c_cnt">(0)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="https://hi0seon.tistory.com/category/sswu/%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4%20%EA%B3%B5%ED%95%99">
+									소프트웨어 공학
+																			<span class="c_cnt">(5)</span>
+									
+																	</a>
+							</li>
+											</ul>
+					
+				</li>
+							<li class="">
+					<a class="link_item" href="https://hi0seon.tistory.com/category/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20%EC%96%B8%EC%96%B4">
+						프로그래밍 언어													<span class="c_cnt">(34)</span>
+						
+											</a>
+
+										<ul class="sub_category_list">
+													<li class="">
+								<a class="link_sub_item" href="https://hi0seon.tistory.com/category/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20%EC%96%B8%EC%96%B4/Java">
+									Java
+																			<span class="c_cnt">(0)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="https://hi0seon.tistory.com/category/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20%EC%96%B8%EC%96%B4/C%2B%2B">
+									C++
+																			<span class="c_cnt">(4)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="https://hi0seon.tistory.com/category/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20%EC%96%B8%EC%96%B4/Python">
+									Python
+																			<span class="c_cnt">(4)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="https://hi0seon.tistory.com/category/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20%EC%96%B8%EC%96%B4/html">
+									html
+																			<span class="c_cnt">(2)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="https://hi0seon.tistory.com/category/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20%EC%96%B8%EC%96%B4/javascript">
+									javascript
+																			<span class="c_cnt">(2)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="https://hi0seon.tistory.com/category/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20%EC%96%B8%EC%96%B4/swift">
+									swift
+																			<span class="c_cnt">(12)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="https://hi0seon.tistory.com/category/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20%EC%96%B8%EC%96%B4/iOS">
+									iOS
+																			<span class="c_cnt">(10)</span>
+									
+																	</a>
+							</li>
+											</ul>
+					
+				</li>
+							<li class="">
+					<a class="link_item" href="https://hi0seon.tistory.com/category/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4">
+						데이터베이스													<span class="c_cnt">(10)</span>
+						
+											</a>
+
+										<ul class="sub_category_list">
+													<li class="">
+								<a class="link_sub_item" href="https://hi0seon.tistory.com/category/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4/Oracle">
+									Oracle
+																			<span class="c_cnt">(7)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="https://hi0seon.tistory.com/category/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4/SQL">
+									SQL
+																			<span class="c_cnt">(3)</span>
+									
+																	</a>
+							</li>
+											</ul>
+					
+				</li>
+							<li class="">
+					<a class="link_item" href="https://hi0seon.tistory.com/category/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%26%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0">
+						알고리즘&amp;자료구조													<span class="c_cnt">(7)</span>
+						
+											</a>
+
+										<ul class="sub_category_list">
+													<li class="">
+								<a class="link_sub_item" href="https://hi0seon.tistory.com/category/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%26%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/%EB%85%B8%ED%8A%B8">
+									노트
+																			<span class="c_cnt">(4)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="https://hi0seon.tistory.com/category/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%26%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8">
+									코딩테스트
+																			<span class="c_cnt">(2)</span>
+									
+																	</a>
+							</li>
+											</ul>
+					
+				</li>
+							<li class="">
+					<a class="link_item" href="https://hi0seon.tistory.com/category/Github">
+						Github													<span class="c_cnt">(1)</span>
+						
+											</a>
+
+					
+				</li>
+							<li class="">
+					<a class="link_item" href="https://hi0seon.tistory.com/category/linux">
+						linux													<span class="c_cnt">(5)</span>
+						
+											</a>
+
+					
+				</li>
+							<li class="">
+					<a class="link_item" href="https://hi0seon.tistory.com/category/Framework%20%26%20Library">
+						Framework &amp; Library													<span class="c_cnt">(24)</span>
+						
+											</a>
+
+										<ul class="sub_category_list">
+													<li class="">
+								<a class="link_sub_item" href="https://hi0seon.tistory.com/category/Framework%20%26%20Library/React-Native">
+									React-Native
+																			<span class="c_cnt">(2)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="https://hi0seon.tistory.com/category/Framework%20%26%20Library/Django">
+									Django
+																			<span class="c_cnt">(1)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="https://hi0seon.tistory.com/category/Framework%20%26%20Library/springboot">
+									springboot
+																			<span class="c_cnt">(20)</span>
+									
+																	</a>
+							</li>
+											</ul>
+					
+				</li>
+							<li class="">
+					<a class="link_item" href="https://hi0seon.tistory.com/category/IT">
+						IT													<span class="c_cnt">(2)</span>
+						
+											</a>
+
+					
+				</li>
+							<li class="">
+					<a class="link_item" href="https://hi0seon.tistory.com/category/diary">
+						diary													<span class="c_cnt">(1)</span>
+						
+											</a>
+
+					
+				</li>
+							<li class="">
+					<a class="link_item" href="https://hi0seon.tistory.com/category/%EC%9D%BC%EC%83%81">
+						일상													<span class="c_cnt">(5)</span>
+						
+											</a>
+
+					
+				</li>
+							<li class="">
+					<a class="link_item" href="https://hi0seon.tistory.com/category/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B0%9C%EB%B0%9C%20%EC%9D%BC%EC%A7%80">
+						프로젝트 개발 일지													<span class="c_cnt">(5)</span>
+						
+											</a>
+
+										<ul class="sub_category_list">
+													<li class="">
+								<a class="link_sub_item" href="https://hi0seon.tistory.com/category/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B0%9C%EB%B0%9C%20%EC%9D%BC%EC%A7%80/%EC%BA%90%EC%8B%9C%20%EB%A9%94%EB%AA%A8%EB%A6%AC%20%EA%B5%AC%ED%98%84">
+									캐시 메모리 구현
+																			<span class="c_cnt">(0)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="https://hi0seon.tistory.com/category/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B0%9C%EB%B0%9C%20%EC%9D%BC%EC%A7%80/%EB%82%A0%EC%94%A8%EC%97%90%20%EB%A7%9E%EB%8A%94%20%EC%98%B7%20%EC%B6%94%EC%B2%9C">
+									날씨에 맞는 옷 추천
+																			<span class="c_cnt">(0)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="https://hi0seon.tistory.com/category/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B0%9C%EB%B0%9C%20%EC%9D%BC%EC%A7%80/%5B42Seoul%5D42-%EA%B5%AC%EC%9D%B8%EA%B5%AC%EC%A7%81%20%EC%84%9C%EB%B9%84%EC%8A%A4">
+									[42Seoul]42-구인구직 서비스
+																			<span class="c_cnt">(0)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="https://hi0seon.tistory.com/category/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B0%9C%EB%B0%9C%20%EC%9D%BC%EC%A7%80/%EC%98%A4%EB%A5%98%20%26%20%EC%97%90%EB%9F%AC%20%ED%95%B4%EA%B2%B0">
+									오류 &amp; 에러 해결
+																			<span class="c_cnt">(1)</span>
+									
+																	</a>
+							</li>
+											</ul>
+					
+				</li>
+							<li class="">
+					<a class="link_item" href="https://hi0seon.tistory.com/category/42%20SEOUL">
+						42 SEOUL													<span class="c_cnt">(25)</span>
+						
+											</a>
+
+										<ul class="sub_category_list">
+													<li class="">
+								<a class="link_sub_item" href="https://hi0seon.tistory.com/category/42%20SEOUL/La%20Piscine%20%ED%9B%84%EA%B8%B0">
+									La Piscine 후기
+																			<span class="c_cnt">(2)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="https://hi0seon.tistory.com/category/42%20SEOUL/%EB%B0%B0%EC%9A%B4%20%EA%B2%83%EB%93%A4%20%EC%A0%95%EB%A6%AC">
+									배운 것들 정리
+																			<span class="c_cnt">(17)</span>
+									
+																	</a>
+							</li>
+											</ul>
+					
+				</li>
+					</ul>
+			</li>
+</ul>
+									<a href="https://hi0seon.tistory.com/guestbook" class="link_guestbook">Guestbook</a>
+								</div>
+								<div class="wrap_etc">
+									<div class="col_aside left_side">
+										                        <div class="revenue_unit_wrap ">
+               <div class="revenue_unit_item adsense  responsive">
+                    <div class="revenue_unit_info">반응형</div>
+                    <script async="" src="./[42Seoul_Cub3d] #1 cub3d 시작하기_files/f.txt"></script>
+                    <ins class="adsbygoogle" style="display:block;" data-ad-host="ca-host-pub-9691043933427338" data-ad-client="ca-pub-8219658684250722" data-ad-format="auto"></ins>
+                    <script>(adsbygoogle = window.adsbygoogle || []).push({}); </script>
+               </div>
+            </div>
+												<!-- 공지사항 -->
+												
+													<div class="box_aside">
+														<strong class="tit_aside">Notice</strong>
+														<ul class="list_board">
+															
+														</ul>
+													</div>
+												
+											
+												<!-- 최근에 올라온 글 -->
+												<div class="box_aside">
+													<strong class="tit_aside">Recent Posts</strong>
+													<ul class="list_board">
+														
+															<li><a href="https://hi0seon.tistory.com/entry/2022-%ED%95%98%EB%B0%98%EA%B8%B0-%EB%84%A4%EC%9D%B4%EB%B2%84-%EA%B3%B5%EC%B1%84-%ED%9B%84%EA%B8%B0" class="link_board">2022 하반기 네이버 공채⋯</a></li>
+														
+
+															<li><a href="https://hi0seon.tistory.com/entry/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EC%97%AC%ED%96%89%EA%B2%BD%EB%A1%9C-%ED%8C%8C%EC%9D%B4%EC%8D%AC-DFS" class="link_board">프로그래머스 - 여행경로⋯</a></li>
+														
+
+															<li><a href="https://hi0seon.tistory.com/entry/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EB%8B%A8%EC%96%B4-%EB%B3%80%ED%99%98-%ED%8C%8C%EC%9D%B4%EC%8D%AC" class="link_board">프로그래머스 - 단어 변환⋯</a></li>
+														
+
+															<li><a href="https://hi0seon.tistory.com/entry/Dockerfile-%EB%A0%88%EC%9D%B4%EC%96%B4-%EC%88%98" class="link_board">Dockerfile 레이어 수</a></li>
+														
+													</ul>
+												</div>
+											
+												<!-- 최근에 달린 댓글 -->
+												<div class="box_aside">
+													<strong class="tit_aside">Recent Comments</strong>
+													<ul class="list_board">
+														
+															<li><a href="https://hi0seon.tistory.com/70#comment13033827" class="link_board">안녕하세요 지금은 버전 3로⋯</a></li>
+														
+
+															<li><a href="https://hi0seon.tistory.com/70#comment12986497" class="link_board">안녕하세요 게시해주신 글 잘⋯</a></li>
+														
+
+															<li><a href="https://hi0seon.tistory.com/71#comment12511087" class="link_board">누나 화이팅이야❤️</a></li>
+														
+													</ul>
+												</div>
+											
+												<!-- 링크 -->
+												<div class="box_aside">
+													<strong class="tit_aside">Link</strong>
+													<ul class="list_board">
+														
+													</ul>
+												</div>
+											
+									</div>
+
+
+									<div class="col_aside right_side">
+										
+												<!-- 달력 -->
+												<div class="box_aside box_calendar">
+															<table class="tt-calendar" cellpadding="0" cellspacing="1" style="width: 100%; table-layout: fixed">
+			<caption class="cal_month">
+				<a href="https://hi0seon.tistory.com/archive/202209" title="1개월 앞의 달력을 보여줍니다.">«</a>
+				&nbsp;
+				<a href="https://hi0seon.tistory.com/archive/202210" title="현재 달의 달력을 보여줍니다.">2022/10</a>
+				&nbsp;
+				<a href="https://hi0seon.tistory.com/archive/202211" title="1개월 뒤의 달력을 보여줍니다.">»</a>
+			</caption>
+			<thead>
+			<tr>
+				<th class="cal_week2">일</th>
+				<th class="cal_week1">월</th>
+				<th class="cal_week1">화</th>
+				<th class="cal_week1">수</th>
+				<th class="cal_week1">목</th>
+				<th class="cal_week1">금</th>
+				<th class="cal_week1">토</th>
+			</tr>
+			</thead>
+			<tbody>
+					<tr class="cal_week">
+			<td class="cal_day1">&nbsp;</td>
+			<td class="cal_day1">&nbsp;</td>
+			<td class="cal_day1">&nbsp;</td>
+			<td class="cal_day1">&nbsp;</td>
+			<td class="cal_day1">&nbsp;</td>
+			<td class="cal_day1">&nbsp;</td>
+			<td class=" cal_day cal_day3">1</td>
+		</tr>
+		<tr class="cal_week">
+			<td class=" cal_day cal_day_sunday cal_day3">2</td>
+			<td class=" cal_day cal_day3">3</td>
+			<td class=" cal_day cal_day3">4</td>
+			<td class=" cal_day cal_day3">5</td>
+			<td class=" cal_day cal_day3">6</td>
+			<td class=" cal_day cal_day3">7</td>
+			<td class=" cal_day cal_day3">8</td>
+		</tr>
+		<tr class="cal_week">
+			<td class=" cal_day cal_day_sunday cal_day3">9</td>
+			<td class=" cal_day cal_day3">10</td>
+			<td class=" cal_day cal_day3">11</td>
+			<td class=" cal_day cal_day3">12</td>
+			<td class=" cal_day cal_day3">13</td>
+			<td class=" cal_day cal_day3">14</td>
+			<td class=" cal_day cal_day3">15</td>
+		</tr>
+		<tr class="cal_week">
+			<td class=" cal_day cal_day_sunday cal_day3">16</td>
+			<td class=" cal_day cal_day3">17</td>
+			<td class=" cal_day cal_day3">18</td>
+			<td class=" cal_day cal_day3">19</td>
+			<td class=" cal_day cal_day3">20</td>
+			<td class=" cal_day cal_day3">21</td>
+			<td class=" cal_day cal_day3">22</td>
+		</tr>
+		<tr class="cal_week">
+			<td class=" cal_day cal_day_sunday cal_day3">23</td>
+			<td class=" cal_day cal_day3">24</td>
+			<td class=" cal_day cal_day3">25</td>
+			<td class=" cal_day cal_day3">26</td>
+			<td class=" cal_day cal_day3">27</td>
+			<td class=" cal_day cal_day3">28</td>
+			<td class=" cal_day cal_day3">29</td>
+		</tr>
+		<tr class="cal_week cal_current_week">
+			<td class=" cal_day cal_day_sunday cal_day4">30</td>
+			<td class=" cal_day cal_day3">31</td>
+			<td class="cal_day2">&nbsp;</td>
+			<td class="cal_day2">&nbsp;</td>
+			<td class="cal_day2">&nbsp;</td>
+			<td class="cal_day2">&nbsp;</td>
+			<td class="cal_day2">&nbsp;</td>
+		</tr>
+			</tbody>
+		</table>
+		
+												</div>
+											
+												<!-- 태그 클라우드 -->
+												<div class="box_aside box_tag">
+													<strong class="tit_aside">Tags</strong>
+													<ul class="list_tag">
+														
+															<li><a href="https://hi0seon.tistory.com/tag/%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5" class="link_tag cloud4">인공지능</a></li>
+														
+															<li><a href="https://hi0seon.tistory.com/tag/JPA" class="link_tag cloud4">JPA</a></li>
+														
+															<li><a href="https://hi0seon.tistory.com/tag/springboot" class="link_tag cloud3">springboot</a></li>
+														
+															<li><a href="https://hi0seon.tistory.com/tag/CD" class="link_tag cloud4">CD</a></li>
+														
+															<li><a href="https://hi0seon.tistory.com/tag/%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC" class="link_tag cloud4">다이어리</a></li>
+														
+															<li><a href="https://hi0seon.tistory.com/tag/%EB%A6%AC%EB%88%85%EC%8A%A4" class="link_tag cloud4">리눅스</a></li>
+														
+															<li><a href="https://hi0seon.tistory.com/tag/%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC" class="link_tag cloud4">아이패드다이어리</a></li>
+														
+															<li><a href="https://hi0seon.tistory.com/tag/jenkins" class="link_tag cloud4">jenkins</a></li>
+														
+															<li><a href="https://hi0seon.tistory.com/tag/Spring" class="link_tag cloud3">Spring</a></li>
+														
+															<li><a href="https://hi0seon.tistory.com/tag/swift" class="link_tag cloud1">swift</a></li>
+														
+															<li><a href="https://hi0seon.tistory.com/tag/%EC%8A%A4%ED%94%84%EB%A7%81" class="link_tag cloud4">스프링</a></li>
+														
+															<li><a href="https://hi0seon.tistory.com/tag/DBMS" class="link_tag cloud4">DBMS</a></li>
+														
+															<li><a href="https://hi0seon.tistory.com/tag/42seoul" class="link_tag cloud4">42seoul</a></li>
+														
+															<li><a href="https://hi0seon.tistory.com/tag/MySQL" class="link_tag cloud4">MySQL</a></li>
+														
+															<li><a href="https://hi0seon.tistory.com/tag/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC" class="link_tag cloud4">네트워크</a></li>
+														
+															<li><a href="https://hi0seon.tistory.com/tag/sql" class="link_tag cloud3">sql</a></li>
+														
+															<li><a href="https://hi0seon.tistory.com/tag/Dining%20philosopher%20problem" class="link_tag cloud5">Dining philosopher problem</a></li>
+														
+															<li><a href="https://hi0seon.tistory.com/tag/Xcode" class="link_tag cloud4">Xcode</a></li>
+														
+															<li><a href="https://hi0seon.tistory.com/tag/%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8" class="link_tag cloud4">스프링부트</a></li>
+														
+															<li><a href="https://hi0seon.tistory.com/tag/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%96%B8%EC%96%B4%EB%A1%A0" class="link_tag cloud4">프로그래밍언어론</a></li>
+														
+															<li><a href="https://hi0seon.tistory.com/tag/%EC%86%8C%EC%BC%93" class="link_tag cloud4">소켓</a></li>
+														
+															<li><a href="https://hi0seon.tistory.com/tag/%EC%98%A4%EB%9D%BC%ED%81%B4" class="link_tag cloud3">오라클</a></li>
+														
+															<li><a href="https://hi0seon.tistory.com/tag/%EB%B0%A5%EB%A8%B9%EB%8A%94%20%EC%B2%A0%ED%95%99%EC%9E%90" class="link_tag cloud5">밥먹는 철학자</a></li>
+														
+															<li><a href="https://hi0seon.tistory.com/tag/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4" class="link_tag cloud3">데이터베이스</a></li>
+														
+															<li><a href="https://hi0seon.tistory.com/tag/CI" class="link_tag cloud4">CI</a></li>
+														
+															<li><a href="https://hi0seon.tistory.com/tag/AI" class="link_tag cloud4">AI</a></li>
+														
+															<li><a href="https://hi0seon.tistory.com/tag/libasm" class="link_tag cloud4">libasm</a></li>
+														
+															<li><a href="https://hi0seon.tistory.com/tag/IOS" class="link_tag cloud1">IOS</a></li>
+														
+															<li><a href="https://hi0seon.tistory.com/tag/javascript" class="link_tag cloud4">javascript</a></li>
+														
+															<li><a href="https://hi0seon.tistory.com/tag/%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8%20%EC%9B%B9%20%EC%86%8C%EC%BC%93" class="link_tag cloud5">스프링부트 웹 소켓</a></li>
+														
+													</ul>
+													<a href="https://hi0seon.tistory.com/tag" class="link_more">more</a>
+												</div>
+											
+												<!-- 글 보관함 -->
+												<div class="box_aside box_archive">
+													<strong class="tit_aside">Archives</strong>
+													<ul class="list_keep">
+														
+															<li><a href="https://hi0seon.tistory.com/archive/202209" class="link_keep">2022/09</a> (1)</li>
+														
+
+															<li><a href="https://hi0seon.tistory.com/archive/202207" class="link_keep">2022/07</a> (1)</li>
+														
+
+															<li><a href="https://hi0seon.tistory.com/archive/202206" class="link_keep">2022/06</a> (2)</li>
+														
+
+															<li><a href="https://hi0seon.tistory.com/archive/202205" class="link_keep">2022/05</a> (6)</li>
+														
+
+															<li><a href="https://hi0seon.tistory.com/archive/202204" class="link_keep">2022/04</a> (1)</li>
+														
+													</ul>
+												</div>
+											
+												<!-- 방문자수 -->
+												<div class="box_aside box_visitor">
+													<dl class="list_visitor">
+														<dt>Today</dt>
+														<dd>1</dd>
+													</dl>
+													<dl class="list_total">
+														<dt>Total</dt>
+														<dd>29,364</dd>
+													</dl>
+												</div>
+											
+									</div>
+								</div>
+							</div>
+						</div>
+						<button type="button" class="ico_skin btn_close">닫기</button>
+
+						<strong class="screen_out">관리 메뉴</strong>
+						<ul class="list_control">
+							<li><a href="https://hi0seon.tistory.com/manage/entry/post" class="ico_skin link_write" title="글쓰기">글쓰기</a></li>
+							<li><a href="https://hi0seon.tistory.com/guestbook" class="ico_skin link_memo" title="방명록">방명록</a></li>
+							<li><a href="https://hi0seon.tistory.com/rss" class="ico_skin link_rss" title="RSS">RSS</a></li>
+							<li><a href="https://hi0seon.tistory.com/manage" class="ico_skin link_manage" title="관리">관리</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div id="mArticle" class="article_skin">
+
+					
+
+					<div class="index_title">
+						<h2 class="tit_skin"><span class="txt_title">Hi yoahn 개발블로그</span></h2>
+					</div>
+
+					
+						
+
+
+						
+							<h2 id="dkBody" class="screen_out">[42Seoul/Cub3d] #1 cub3d 시작하기 본문</h2>
+							<div class="area_title">
+								<strong class="tit_category"><a href="https://hi0seon.tistory.com/category/42%20SEOUL/%EB%B0%B0%EC%9A%B4%20%EA%B2%83%EB%93%A4%20%EC%A0%95%EB%A6%AC">42 SEOUL/배운 것들 정리</a></strong>
+								<h3 class="tit_post">[42Seoul/Cub3d] #1 cub3d 시작하기</h3>
+								<span class="info_post">hi._.0seon
+                                <span class="txt_bar"></span>2021. 3. 12. 17:21
+								
+							</span>
+							</div>
+
+							<div class="area_view">
+								<div class="tt_article_useless_p_margin contents_style">            <div class="revenue_unit_wrap ">
+               <div class="revenue_unit_item adsense  responsive">
+                    <div class="revenue_unit_info">반응형</div>
+                    <script async="" src="./[42Seoul_Cub3d] #1 cub3d 시작하기_files/f.txt"></script>
+                    <ins class="adsbygoogle" style="display:block;" data-ad-host="ca-host-pub-9691043933427338" data-ad-client="ca-pub-8219658684250722" data-ad-format="auto"></ins>
+                    <script>(adsbygoogle = window.adsbygoogle || []).push({}); </script>
+               </div>
+            </div><p>큡삼디는 기본적으로 컴퓨터그래픽을 이용?하는 프로젝트인데, 인트라에 있는 subject 파일만 보고서는 감이 안와서 ft_server 평가받을 때 이미 하셨던 분들한테 물어봤는데 인트라에 서브젝트 파일과 같이 라이브러리 파일들이 압축파일로 있고, 그것들을 이용하는 거라고 하셔서 라이브러리 사용법부터 알아보기로 했다!</p>
+<p>&nbsp;</p>
+<h2 data-ke-size="size26">1. mlx 라이브러리</h2>
+<p>라이브러리를 사용하려고 보니 압축파일은 정말 말그대로 라이브러리 압축파일이어서 별다른 설명이 하나도 없었다. 그래서 디스코드에서 과제 해결하셨던 분들이 참고하기 좋다고 하시는 자료들을 보다가, 아래 링크에 있는 예제를 보면서 하나씩 따라해 보기로 했다!</p>
+<p>&nbsp;</p>
+<p>먼저 MiniLibX 라이브러리는 Unix나 Linux의 X-Window/X11 프로그래밍 지식 없이도 쉽게 그래픽 소프트웨어를 생성할 수 있게 해준다.</p>
+<p>간단한 윈도우를 생성하고, 그리는 도구, 이미지와 기본 이벤트 관리를 제공한다</p>
+<p>&nbsp;</p>
+<p>mlx.h 파일을 인클루드하여 MiniLibX API를 사용할 수 있다.</p>
+<p>&nbsp;</p>
+<p><a href="https://github.com/taelee42/mlx_example" target="_blank" rel="noopener">github.com/taelee42/mlx_example</a></p>
+<figure id="og_1615529245101" contenteditable="false" data-ke-type="opengraph" data-og-type="object" data-og-title="taelee42/mlx_example" data-og-description="Some examples for those who try to use MLX library for 42 subject CUB3D or miniRT. And some helpful links. - taelee42/mlx_example" data-og-host="github.com" data-og-source-url="https://github.com/taelee42/mlx_example" data-og-url="https://github.com/taelee42/mlx_example" data-og-image="https://scrap.kakaocdn.net/dn/cMRTBI/hyJyvN1Q4E/hpttT0F8KU02HoZMxSA9OK/img.jpg?width=314&amp;height=314&amp;face=0_0_314_314"><a href="https://github.com/taelee42/mlx_example" target="_blank" rel="noopener" data-source-url="https://github.com/taelee42/mlx_example">
+<div class="og-image" style="background-image: url(&#39;https://scrap.kakaocdn.net/dn/cMRTBI/hyJyvN1Q4E/hpttT0F8KU02HoZMxSA9OK/img.jpg?width=314&amp;height=314&amp;face=0_0_314_314&#39;);">&nbsp;</div>
+<div class="og-text">
+<p class="og-title">taelee42/mlx_example</p>
+<p class="og-desc">Some examples for those who try to use MLX library for 42 subject CUB3D or miniRT. And some helpful links. - taelee42/mlx_example</p>
+<p class="og-host">github.com</p>
+</div>
+</a></figure>
+<h4 data-ke-size="size20"><b>예제 01</b></h4>
+<p>단순한 화면을 띄우는 예제</p>
+<p>시작을 위해 화면을 띄우는 방법부터 보기로 했다!</p>
+<pre id="code_1615530641537" class="c++ arduino" data-ke-language="c++" data-ke-type="codeblock"><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">"../mlx/mlx.h"</span></span>
+
+<span class="hljs-function"><span class="hljs-keyword">int</span>     <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
+</span>{
+    <span class="hljs-keyword">void</span>    *mlx;
+    <span class="hljs-keyword">void</span>    *win;
+
+    mlx = <span class="hljs-built_in">mlx_init</span>();
+    win = <span class="hljs-built_in">mlx_new_window</span>(mlx, <span class="hljs-number">500</span>, <span class="hljs-number">500</span>, <span class="hljs-string">"mlx_project"</span>);
+    <span class="hljs-built_in">mlx_loop</span>(mlx);
+}</code></pre>
+<ul style="list-style-type: disc;" data-ke-list-type="disc">
+<li><b>void *&nbsp;mlx_init();<br></b><span style="font-size: 1.12em; letter-spacing: 0px;">디스플레이와 소프트웨어의 연결을 생성하기 위한 initialize</span><b><br></b></li>
+<li><b>void* mlx_new_window ( void* mlx_ptr, int size_x, int size_y, char *title );</b><br>windows 관리<br>새로운 윈도우를 스크린 위에 생성하는 함수<br>mlx_init() 에서 반환된 mlx 포인터를 mlx_ptr 매개변수 자리에 넣는다.</li>
+<li><b>int mlx_loop( void* mlx_ptr );</b><br>마지막에 이걸 쳐줘야 프로그램이 종료되지 않고 계속 돌아감</li>
+</ul>
+<h4 data-ke-size="size20"><b>예제&nbsp;02</b></h4>
+<pre id="code_1615530944866" class="c++ arduino" data-ke-language="c++" data-ke-type="codeblock"><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdlib.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">"../mlx/mlx.h"</span></span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> X_EVENT_KEY_PRESS       2</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> X_EVENT_KEY_release     3</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> X_EVENT_KEY_EXIT        17 <span class="hljs-comment">//exit key code</span></span>
+
+<span class="hljs-comment">//Mac key code example</span>
+<span class="hljs-comment">//All the key code example other than below is described on the site linked in READEME.md</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> KEY_ESC         53</span>
+<span class="hljs-meta"># <span class="hljs-meta-keyword">define</span> KEY_Q          12</span>
+<span class="hljs-meta"># <span class="hljs-meta-keyword">define</span> KEY_W          13</span>
+<span class="hljs-meta"># <span class="hljs-meta-keyword">define</span> KEY_E          14</span>
+<span class="hljs-meta"># <span class="hljs-meta-keyword">define</span> KEY_R          15</span>
+<span class="hljs-meta"># <span class="hljs-meta-keyword">define</span> KEY_A          0</span>
+<span class="hljs-meta"># <span class="hljs-meta-keyword">define</span> KEY_S          1</span>
+<span class="hljs-meta"># <span class="hljs-meta-keyword">define</span> KEY_D          2</span>
+
+<span class="hljs-comment">//Since key_press() can recieve only one argument, all the argument shold be gathered in one structure</span>
+<span class="hljs-comment">//x,y and str are meaningless variables.</span>
+<span class="hljs-keyword">typedef</span> <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">s_param</span>{</span>
+    <span class="hljs-keyword">int</span>     x;
+    <span class="hljs-keyword">int</span>     y;
+    <span class="hljs-keyword">char</span>    str[<span class="hljs-number">3</span>];
+}               t_param;
+
+<span class="hljs-comment">//Only param-&gt;x will be used.</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span>            <span class="hljs-title">param_init</span><span class="hljs-params">(t_param *param)</span>
+</span>{
+    param-&gt;x = <span class="hljs-number">3</span>;
+    param-&gt;y = <span class="hljs-number">4</span>;
+    param-&gt;str[<span class="hljs-number">0</span>] = <span class="hljs-string">'a'</span>;
+    param-&gt;str[<span class="hljs-number">1</span>] = <span class="hljs-string">'b'</span>;
+    param-&gt;str[<span class="hljs-number">2</span>] = <span class="hljs-string">'\0'</span>;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">int</span>             <span class="hljs-title">key_press</span><span class="hljs-params">(<span class="hljs-keyword">int</span> keycode, t_param *param)</span>
+</span>{
+    <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> a = <span class="hljs-number">0</span>;
+
+    <span class="hljs-keyword">if</span> (keycode == KEY_W)<span class="hljs-comment">//Action when W key pressed</span>
+        param-&gt;x++;
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (keycode == KEY_S) <span class="hljs-comment">//Action when S key pressed</span>
+        param-&gt;x--;
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (keycode == KEY_ESC) <span class="hljs-comment">//Quit the program when ESC key pressed</span>
+        <span class="hljs-built_in">exit</span>(<span class="hljs-number">0</span>);
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"x: %d\n"</span>, param-&gt;x);
+    <span class="hljs-keyword">return</span> (<span class="hljs-number">0</span>);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">int</span>         <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
+</span>{
+    <span class="hljs-keyword">void</span>        *mlx;
+    <span class="hljs-keyword">void</span>        *win;
+    t_param     param;
+
+    <span class="hljs-built_in">param_init</span>(&amp;param);
+    mlx = <span class="hljs-built_in">mlx_init</span>();
+    win = <span class="hljs-built_in">mlx_new_window</span>(mlx, <span class="hljs-number">500</span>, <span class="hljs-number">500</span>, <span class="hljs-string">"mlx_project"</span>);
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"-------------------------------\n"</span>);
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"'W key': Add 1 to x.\n"</span>);
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"'S key': Subtract 1 from x\n"</span>);
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"'ESC key': Exit this program\n"</span>);
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"'Other keys': print current x \n"</span>);
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"-------------------------------\n"</span>);
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"Current x = 3\n"</span>);
+    <span class="hljs-built_in">mlx_hook</span>(win, X_EVENT_KEY_PRESS, <span class="hljs-number">0</span>, &amp;key_press, &amp;param);
+    <span class="hljs-built_in">mlx_loop</span>(mlx);
+}</code></pre>
+<ul style="list-style-type: disc;" data-ke-list-type="disc">
+<li><b>int mlx_hook( void* win_ptr, int x_event, int x_mask, int (*funct)( ), void *param );<br></b>x_event 값에 따라 key_press, key_release, mouse 클릭, 창닫기 버튼 등 입력 받기 가능</li>
+</ul>
+<p><a href="https://github.com/VBrazhnik/FdF/wiki/How-to-handle-mouse-buttons-and-key-presses%3F" target="_blank" rel="noopener">github.com/VBrazhnik/FdF/wiki/How-to-handle-mouse-buttons-and-key-presses%3F</a></p>
+<figure id="og_1615536625198" contenteditable="false" data-ke-type="opengraph" data-og-type="object" data-og-title="VBrazhnik/FdF" data-og-description="School 42 project // 3D Wireframe Viewer. Contribute to VBrazhnik/FdF development by creating an account on GitHub." data-og-host="github.com" data-og-source-url="https://github.com/VBrazhnik/FdF/wiki/How-to-handle-mouse-buttons-and-key-presses%3F" data-og-url="https://github.com/VBrazhnik/FdF" data-og-image="https://scrap.kakaocdn.net/dn/krgmD/hyJyldBN2H/H1BOWJkJgZwB38UrS4PTh0/img.png?width=400&amp;height=400&amp;face=0_0_400_400"><a href="https://github.com/VBrazhnik/FdF/wiki/How-to-handle-mouse-buttons-and-key-presses%3F" target="_blank" rel="noopener" data-source-url="https://github.com/VBrazhnik/FdF/wiki/How-to-handle-mouse-buttons-and-key-presses%3F">
+<div class="og-image" style="background-image: url(&#39;https://scrap.kakaocdn.net/dn/krgmD/hyJyldBN2H/H1BOWJkJgZwB38UrS4PTh0/img.png?width=400&amp;height=400&amp;face=0_0_400_400&#39;);">&nbsp;</div>
+<div class="og-text">
+<p class="og-title">VBrazhnik/FdF</p>
+<p class="og-desc">School 42 project // 3D Wireframe Viewer. Contribute to VBrazhnik/FdF development by creating an account on GitHub.</p>
+<p class="og-host">github.com</p>
+</div>
+</a></figure>
+<h4 data-ke-size="size20">int x_event 파라미터 값</h4>
+<p data-ke-size="size18">To handle a <b>key press : 2</b></p>
+<p data-ke-size="size16">int (*funct)( ) 자리에 넣는 함수</p>
+<pre id="code_1615537358290" class="c++ arduino" data-ke-language="c++" data-ke-type="codeblock"><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">key_press</span><span class="hljs-params">(<span class="hljs-keyword">int</span> keycode, <span class="hljs-keyword">void</span> *param)</span></span></code></pre>
+<p data-ke-size="size18">To handle a <b>key release: 3</b></p>
+<pre id="code_1615537448334" class="c++ arduino" data-ke-language="c++" data-ke-type="codeblock"><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">key_release</span><span class="hljs-params">(<span class="hljs-keyword">int</span> keycode, <span class="hljs-keyword">void</span> *param)</span></span></code></pre>
+<p data-ke-size="size18">To handle a <b>mouse button press : 4</b></p>
+<pre id="code_1615537487192" class="c++ arduino" data-ke-language="c++" data-ke-type="codeblock"><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">mouse_press</span><span class="hljs-params">(<span class="hljs-keyword">int</span> button, <span class="hljs-keyword">int</span> x, <span class="hljs-keyword">int</span> y, <span class="hljs-keyword">void</span> *param)</span></span></code></pre>
+<p data-ke-size="size18">To handle a <b>mouse button release : 5</b></p>
+<pre id="code_1615537530853" class="c++ arduino" data-ke-language="c++" data-ke-type="codeblock"><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">mouse_release</span><span class="hljs-params">(<span class="hljs-keyword">int</span> button, <span class="hljs-keyword">int</span> x, <span class="hljs-keyword">int</span> y, <span class="hljs-keyword">void</span>* param)</span></span></code></pre>
+<p data-ke-size="size18">To handle a <b>mouse movement : 6</b></p>
+<pre id="code_1615537559405" class="c++ arduino" data-ke-language="c++" data-ke-type="codeblock"><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">mouse_move</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x, <span class="hljs-keyword">int</span> y, <span class="hljs-keyword">void</span> *param)</span></span></code></pre>
+<p data-ke-size="size18">To handle a <b>red button press ( X button ) : 17</b></p>
+<pre id="code_1615548163285" class="c++ arduino" data-ke-language="c++" data-ke-type="codeblock"><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">close</span><span class="hljs-params">(<span class="hljs-keyword">void</span> *param)</span>
+</span>{
+    (<span class="hljs-keyword">void</span>)param;
+    <span class="hljs-built_in">exit</span>(<span class="hljs-number">0</span>);
+}</code></pre>
+<h4 data-ke-size="size20"><b>Key codes</b></h4>
+<p></p><figure class="imageblock alignCenter" data-filename="스크린샷 2021-03-12 오후 8.23.23.png" data-origin-width="1796" data-origin-height="492" data-ke-mobilestyle="widthContent"><span data-url="https://blog.kakaocdn.net/dn/VsEqn/btqZ1J5nJtM/kyNIAHC0zuUz6wEIs3Ymjk/img.png" data-lightbox="lightbox" data-alt=""><img src="./[42Seoul_Cub3d] #1 cub3d 시작하기_files/img.png" srcset="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FVsEqn%2FbtqZ1J5nJtM%2FkyNIAHC0zuUz6wEIs3Ymjk%2Fimg.png" data-filename="스크린샷 2021-03-12 오후 8.23.23.png" data-origin-width="1796" data-origin-height="492" data-ke-mobilestyle="widthContent"></span></figure><p></p>
+<p>Mouse button codes</p>
+<ul style="list-style-type: disc;" data-ke-list-type="disc">
+<li>Left button - 1</li>
+<li>Right - 2</li>
+<li>Middle - 3</li>
+<li>Scroll Up - 4</li>
+<li>Scroll Down - 5</li>
+<li>Scroll Left - 6</li>
+<li>Scroll Right - 7</li>
+</ul>
+<h4 data-ke-size="size20"><b>예제 03</b></h4>
+<p>이미지를 스크린에 그리기</p>
+<pre id="code_1615552437447" class="c++ arduino" data-ke-language="c++" data-ke-type="codeblock"><code class="hljs cpp"><span class="hljs-comment">//Character '북' on the screen means 'North' in Korean.</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">"../mlx/mlx.h"</span></span>
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+</span>{
+        <span class="hljs-keyword">void</span> *mlx;
+        <span class="hljs-keyword">void</span> *win;
+        <span class="hljs-keyword">void</span> *img;
+
+        <span class="hljs-keyword">int</span>     img_width;
+        <span class="hljs-keyword">int</span>     img_height;
+
+        mlx = <span class="hljs-built_in">mlx_init</span>();
+        win = <span class="hljs-built_in">mlx_new_window</span>(mlx, <span class="hljs-number">500</span>, <span class="hljs-number">500</span>, <span class="hljs-string">"my_mlx"</span>);
+        img = <span class="hljs-built_in">mlx_xpm_file_to_image</span>(mlx, <span class="hljs-string">"../textures/wall_n.xpm"</span>, &amp;img_width, &amp;img_height);
+        <span class="hljs-built_in">mlx_put_image_to_window</span>(mlx, win, img, <span class="hljs-number">50</span>, <span class="hljs-number">50</span>);
+        <span class="hljs-built_in">mlx_loop</span>(mlx);
+        <span class="hljs-keyword">return</span> (<span class="hljs-number">0</span>);
+}</code></pre>
+<ul style="list-style-type: disc;" data-ke-list-type="disc">
+<li>mlx_xpm_file_to_image</li>
+<li>mlx_png_file_to_image<br>파일을 이미지에 대한 포인터로 형변환</li>
+</ul>
+<h4 data-ke-size="size20"><b>예제04</b></h4>
+<p>픽셀에 직접 점을 찍어서 그림을 그려 창에 띄운다.</p>
+<p>&nbsp;</p>
+<ul style="list-style-type: disc;" data-ke-list-type="disc">
+<li>이미지 저장을 위한 구조체</li>
+</ul>
+<pre id="code_1615716657274" class="c++ arduino" data-ke-language="c++" data-ke-type="codeblock"><code class="hljs cpp"><span class="hljs-keyword">typedef</span> <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">s_img</span>
+{</span>
+    <span class="hljs-keyword">void</span> *img_pt;
+    <span class="hljs-keyword">int</span> *data;
+    <span class="hljs-keyword">int</span> size_l;
+    <span class="hljs-keyword">int</span> bpp;
+    <span class="hljs-keyword">int</span> endian;
+} t_img;</code></pre>
+<p>전체 코드</p>
+<pre id="code_1616391682382" class="c++ arduino" data-ke-language="c++" data-ke-type="codeblock"><code class="hljs cpp"><span class="hljs-meta"># <span class="hljs-meta-keyword">define</span> WIN_WIDTH 800</span>
+<span class="hljs-meta"># <span class="hljs-meta-keyword">define</span> WIN_HEIGHT 600</span>
+
+<span class="hljs-meta"># <span class="hljs-meta-keyword">define</span> IMG_WIDTH 400</span>
+<span class="hljs-meta"># <span class="hljs-meta-keyword">define</span> IMG_HEIGHT 300</span>
+
+<span class="hljs-keyword">typedef</span> <span class="hljs-class"><span class="hljs-keyword">struct</span>  <span class="hljs-title">s_img</span>
+{</span>
+    <span class="hljs-keyword">void</span>        *img_ptr;
+    <span class="hljs-keyword">int</span>         *data;
+    <span class="hljs-comment">//You don't need to understand the 3 values below.</span>
+    <span class="hljs-comment">//After declaration, it will be automatically initialized when passed to mlx_get_data_addr function.</span>
+    <span class="hljs-comment">//아래 3개 값은 이해 안해도 사용하는데 지장이 없음.</span>
+    <span class="hljs-comment">//선언한뒤 함수의 인자로만 잘 넣어주면 알아서 정보를 받아나옴.</span>
+    <span class="hljs-keyword">int</span>         size_l;
+    <span class="hljs-keyword">int</span>         bpp;
+    <span class="hljs-keyword">int</span>         endian;
+}               t_img;
+
+<span class="hljs-keyword">typedef</span> <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">s_mlx</span>
+{</span>
+    <span class="hljs-keyword">void</span> *mlx_ptr;
+    <span class="hljs-keyword">void</span> *win;
+} t_mlx;
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+</span>{
+    t_mlx   *mlx;
+    <span class="hljs-keyword">int</span>     count_w;
+    <span class="hljs-keyword">int</span>     count_h;
+    t_img   img;
+
+    mlx-&gt;mlx_ptr = <span class="hljs-built_in">mlx_init</span>();
+    mlx-&gt;win = <span class="hljs-built_in">mlx_new_window</span>(mlx-&gt;mlx_ptr, WIN_WIDTH, WIN_HEIGHT, <span class="hljs-string">"A simple example"</span>);
+    img.img_ptr = <span class="hljs-built_in">mlx_new_image</span>(mlx-&gt;mlx_ptr, IMG_WIDTH, IMG_HEIGHT);
+    img.data = (<span class="hljs-keyword">int</span> *)<span class="hljs-built_in">mlx_get_data_addr</span>(img.img_ptr, &amp;img.bpp, &amp;img.size_l, &amp;img.endian);
+
+    <span class="hljs-comment">//The reason why I cast to (int *): If I let this as void * type, whenever I refer to the array values, I need to multiply them by 4.</span>
+    <span class="hljs-comment">//Check out keuhdall's github linked in my README for more information.</span>
+
+    <span class="hljs-comment">//여기서 (int *)를 안해주고 img.data가 void *이면 밑에 배열값들을 참조할 때  다 4를 곱해야한다.</span>
+    <span class="hljs-comment">//그렇기 때문에 int *로 캐스팅해주는편이 좋다고 한다.</span>
+    <span class="hljs-comment">//keuhdall's github가면 더 자세한 내용을 볼 수 있습니다.</span>
+
+    count_h = <span class="hljs-number">-1</span>;
+    <span class="hljs-keyword">while</span> (++count_h &lt; IMG_HEIGHT)
+    {
+        count_w = <span class="hljs-number">-1</span>;
+        <span class="hljs-keyword">while</span> (++count_w &lt; IMG_WIDTH)
+        {
+            <span class="hljs-keyword">if</span> (count_w % <span class="hljs-number">2</span>)
+                img.data[count_h * IMG_WIDTH + count_w] = <span class="hljs-number">0xFFFFFF</span>;
+            <span class="hljs-keyword">else</span>
+                img.data[count_h * IMG_WIDTH + count_w] = <span class="hljs-number">0xFF0000</span>;
+        }
+    }
+    <span class="hljs-built_in">mlx_put_image_to_window</span>(mlx-&gt;mlx_ptr, mlx-&gt;win, img.img_ptr, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
+    <span class="hljs-built_in">mlx_loop</span>(mlx-&gt;mlx_ptr);
+    <span class="hljs-keyword">return</span> (<span class="hljs-number">0</span>);
+}</code></pre>
+<p data-ke-size="size18"><b>void *mlx_new_image(void *mlx_ptr, int width, int height)</b></p>
+<p>새로운 이미지를 생성하기 위한 함수</p>
+<blockquote data-ke-style="style3">픽셀 하나하나에 색을 찍는 방식으로 이미지를 그리는데, 화면의 픽셀 정보를 저장하는 변수는 1차원 배열로 되어있다.<br>1차원 배열의 크기는 (이미지 가로) * (이미지 세로) 이기 때문에<br>2차원 이미지의 각 열들이 한 줄로 나열되어있다고 생각하고 접근하면 된다.<br><br>image가 2차원 배열이라고 가정하면<br>=&gt; img.data[count_h * IMG_WIDTH + count_w] == image[count_h][count_w]</blockquote>
+<p>&nbsp;</p>
+<p><a href="https://github.com/365kim/raycasting_tutorial" target="_blank" rel="noopener">github.com/365kim/raycasting_tutorial</a></p>
+<figure id="og_1615539472580" contenteditable="false" data-ke-type="opengraph" data-og-type="object" data-og-title="365kim/raycasting_tutorial" data-og-description="(한글) 레이캐스팅 튜토리얼 번역. Contribute to 365kim/raycasting_tutorial development by creating an account on GitHub." data-og-host="github.com" data-og-source-url="https://github.com/365kim/raycasting_tutorial" data-og-url="https://github.com/365kim/raycasting_tutorial" data-og-image="https://scrap.kakaocdn.net/dn/c1tLdv/hyJyxSFYoN/njmQsCxB1tMZfht93b4o91/img.jpg?width=400&amp;height=400&amp;face=0_0_400_400"><a href="https://github.com/365kim/raycasting_tutorial" target="_blank" rel="noopener" data-source-url="https://github.com/365kim/raycasting_tutorial">
+<div class="og-image" style="background-image: url(&#39;https://scrap.kakaocdn.net/dn/c1tLdv/hyJyxSFYoN/njmQsCxB1tMZfht93b4o91/img.jpg?width=400&amp;height=400&amp;face=0_0_400_400&#39;);">&nbsp;</div>
+<div class="og-text">
+<p class="og-title">365kim/raycasting_tutorial</p>
+<p class="og-desc">(한글) 레이캐스팅 튜토리얼 번역. Contribute to 365kim/raycasting_tutorial development by creating an account on GitHub.</p>
+<p class="og-host">github.com</p>
+</div>
+</a></figure>
+<h2 data-ke-size="size26">2. mlx_mms 버전 라이브러리 컴파일 방법</h2>
+<p>나는 M1 맥은 아니지만 mms가 인텔이랑 M1 아키텍처 모두에서 실행이 되어서 아키텍처 상관없이 같은 명령어를 써도 되는것 같다.</p>
+<p>&nbsp;</p>
+<p>Makefile 에서 컴파일 할 때 mlx 라이브러리를 make 하면 동적 라이브러리가 생성되는데, 그 libmlx.dylib 파일을 프로젝트 루트 디렉토리에 놓고 컴파일하면 된다.</p>
+<p>&nbsp;</p>
+<blockquote data-ke-style="style3"><b>gcc -I. -Lmlx -lmlx -framework Metal -framework MetalKit -o cub3D $(SRCS)</b></blockquote>
+<p>mlx 빌드할 때 -framework OpenGL -framework Appkit 를 두고 컴파일하는게 있는데, Metal이 OpenGL의 기능을 완전히 대체하면서 성능이 더 개선된 그래픽 API로 2012 이후 출시된 모든 맥에서 지원된다고 한다.</p>
+<p>&nbsp;</p>
+<p><a href="https://velog.io/@seomoon/TIL-210130-M1-%EB%A7%A5%EC%97%90%EC%84%9C-minilibX-%EC%8B%A4%ED%96%89%ED%95%98%EA%B8%B0-42-cub3dminiRT" target="_blank" rel="noopener">velog.io/@seomoon/TIL-210130-M1-맥에서-minilibX-실행하기-42-cub3dminiRT</a></p>
+<figure id="og_1615551176098" contenteditable="false" data-ke-type="opengraph" data-og-type="article" data-og-title="M1 맥에서 mlx(minilibX) 실행하기 (42 cub3d/miniRT)" data-og-description="42서울 cub3D나 miniRT 과제를 진행하려면minilibX 라이브러리를 실행해야 한다. 먼저 인트라의 cub3D/miniRT 프로젝트 페이지에서 minilibx_opengl.tgz 버전을 다운받는다.압축을 풀어서 프로젝트 루트에 위치" data-og-host="velog.io" data-og-source-url="https://velog.io/@seomoon/TIL-210130-M1-맥에서-minilibX-실행하기-42-cub3dminiRT" data-og-url="https://velog.io/@seomoon/TIL-210130-M1-맥에서-minilibX-실행하기-42-cub3dminiRT" data-og-image="https://scrap.kakaocdn.net/dn/lqXbF/hyJyuV2K9H/4O5OUfSphrJTktMvd9rZRk/img.png?width=950&amp;height=500&amp;face=0_0_950_500"><a href="https://velog.io/@seomoon/TIL-210130-M1-%EB%A7%A5%EC%97%90%EC%84%9C-minilibX-%EC%8B%A4%ED%96%89%ED%95%98%EA%B8%B0-42-cub3dminiRT" target="_blank" rel="noopener" data-source-url="https://velog.io/@seomoon/TIL-210130-M1-맥에서-minilibX-실행하기-42-cub3dminiRT">
+<div class="og-image" style="background-image: url(&#39;https://scrap.kakaocdn.net/dn/lqXbF/hyJyuV2K9H/4O5OUfSphrJTktMvd9rZRk/img.png?width=950&amp;height=500&amp;face=0_0_950_500&#39;);">&nbsp;</div>
+<div class="og-text">
+<p class="og-title">M1 맥에서 mlx(minilibX) 실행하기 (42 cub3d/miniRT)</p>
+<p class="og-desc">42서울 cub3D나 miniRT 과제를 진행하려면minilibX 라이브러리를 실행해야 한다. 먼저 인트라의 cub3D/miniRT 프로젝트 페이지에서 minilibx_opengl.tgz 버전을 다운받는다.압축을 풀어서 프로젝트 루트에 위치</p>
+<p class="og-host">velog.io</p>
+</div>
+</a></figure>            <div class="revenue_unit_wrap ">
+               <div class="revenue_unit_item adsense  responsive">
+                    <div class="revenue_unit_info">반응형</div>
+                    <script async="" src="./[42Seoul_Cub3d] #1 cub3d 시작하기_files/f.txt"></script>
+                    <ins class="adsbygoogle" style="display:block;" data-ad-host="ca-host-pub-9691043933427338" data-ad-client="ca-pub-8219658684250722" data-ad-format="auto"></ins>
+                    <script>(adsbygoogle = window.adsbygoogle || []).push({}); </script>
+               </div>
+            </div><div class="container_postbtn #post_button_group">
+    <div class="postbtn_like">
+        
+<script>
+    window.ReactionButtonType = 'reaction';
+    window.ReactionApiUrl = '//hi0seon.tistory.com/reaction';
+    window.ReactionReqBody = {
+        entryId: 129    }
+</script>
+<div class="wrap_btn" id="reaction-129"><button class="btn_post uoc-icon"><div class="uoc-icon"><span class="ico_postbtn ico_like">좋아요</span><span class="txt_like uoc-count">공감</span></div></button></div>
+<script src="./[42Seoul_Cub3d] #1 cub3d 시작하기_files/reaction-button-container.min.js"></script>
+        <div class="wrap_btn wrap_btn_share">
+    <button aria-expanded="false" class="btn_post sns_btn btn_share" data-thumbnail-url="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FVsEqn%2FbtqZ1J5nJtM%2FkyNIAHC0zuUz6wEIs3Ymjk%2Fimg.png" data-title="[42Seoul/Cub3d] #1 cub3d 시작하기" data-description="큡삼디는 기본적으로 컴퓨터그래픽을 이용?하는 프로젝트인데, 인트라에 있는 subject 파일만 보고서는 감이 안와서 ft_server 평가받을 때 이미 하셨던 분들한테 물어봤는데 인트라에 서브젝트 파일과 같이 라이.." data-profile-image="https://tistory3.daumcdn.net/tistory/3499314/attach/6fbc2fe530d44ec8bf149f270cefe7c1" data-profile-name="hi._.0seon" data-pc-url="https://hi0seon.tistory.com/entry/42SeoulCub3d-1-cub3d-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0" data-relative-pc-url="/entry/42SeoulCub3d-1-cub3d-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0" data-blog-title="Hi yoahn 개발블로그">
+        <span class="ico_postbtn ico_share">공유하기</span>
+    </button>
+    <div id="tistorySnsLayer" class="layer_post" style="display: none;"><div class="bundle_post"><a href="https://hi0seon.tistory.com/entry/42SeoulCub3d-1-cub3d-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0#none" class="btn_mark" data-service="facebook"><span class="ico_sns ico_fb"></span>페이스북으로 공유</a><a href="https://hi0seon.tistory.com/entry/42SeoulCub3d-1-cub3d-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0#none" class="btn_mark" data-service="kakaotalk"><span class="ico_sns ico_kt"></span>카카오톡으로 공유</a><a href="https://hi0seon.tistory.com/entry/42SeoulCub3d-1-cub3d-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0#none" class="btn_mark" data-service="kakaostory"><span class="ico_sns ico_ks"></span>카카오스토리로 공유</a><a href="https://hi0seon.tistory.com/entry/42SeoulCub3d-1-cub3d-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0#none" class="btn_mark" data-service="twitter"><span class="ico_sns ico_tw"></span>트위터로 공유</a><a href="https://hi0seon.tistory.com/entry/42SeoulCub3d-1-cub3d-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0#none" class="btn_mark" data-service="url"><span class="ico_sns ico_url"></span>URL 복사</a><span class="ico_postbtn ico_arrbt"></span></div></div>
+</div>
+                <div class="wrap_btn wrap_btn_etc" data-entry-id="129" data-entry-visibility="public" data-category-visibility="public">
+    <button aria-expanded="false" class="btn_post btn_etc2"><span class="ico_postbtn ico_etc">게시글 관리</span></button>
+    <div id="tistoryEtcLayer" class="layer_post" style="display: none;"></div>
+</div>
+    </div>
+
+    <button type="button" class="btn_menu_toolbar btn_subscription  #subscribe" data-blog-id="3499314" data-url="https://hi0seon.tistory.com/129" data-device="web_pc">
+    <em class="txt_state">구독하기</em>
+    <strong class="txt_tool_id">Hi yoahn 개발블로그</strong>
+    <span class="img_common_tistory ico_check_type1"></span>
+</button>
+
+        <div class="postbtn_ccl" data-ccl-type="1">
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.ko" target="_blank" class="link_ccl" rel="license">
+        <span class="bundle_ccl">
+            <span class="ico_postbtn ico_ccl1">저작자표시</span><span class="ico_postbtn ico_ccl2">비영리</span><span class="ico_postbtn ico_ccl4">변경금지</span>        </span>
+    </a>
+</div>
+    <!--
+<rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <Work rdf:about="">
+        <license rdf:resource="http://creativecommons.org/licenses/by-nc-nd/4.0/deed.ko" />
+    </Work>
+    <License rdf:about="http://creativecommons.org/licenses/by-nc-nd/4.0/deed.ko">
+        <permits rdf:resource="http://web.resource.org/cc/Reproduction"/>
+        <permits rdf:resource="http://web.resource.org/cc/Distribution"/>
+        <requires rdf:resource="http://web.resource.org/cc/Notice"/>
+        <requires rdf:resource="http://web.resource.org/cc/Attribution"/>
+                        <prohibits rdf:resource="http://web.resource.org/cc/CommercialUse"/>
+            </License>
+</rdf:RDF>
+-->
+    </div><div class="another_category another_category_color_gray">
+<h4>'<a href="https://hi0seon.tistory.com/category/42%20SEOUL">42 SEOUL</a>&nbsp;&gt;&nbsp;<a href="https://hi0seon.tistory.com/category/42%20SEOUL/%EB%B0%B0%EC%9A%B4%20%EA%B2%83%EB%93%A4%20%EC%A0%95%EB%A6%AC">배운 것들 정리</a>' 카테고리의 다른 글</h4>
+<table>
+<tbody><tr>
+<th>
+<a href="https://hi0seon.tistory.com/entry/42SeoulCub3d-2-cub3D-%EB%B2%A1%ED%84%B0%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%B4-%ED%99%94%EB%A9%B4-%EA%B7%B8%EB%A6%AC%EA%B8%B0?category=891972">[42Seoul/Cub3d] #2 cub3D 벡터를 이용해 화면 그리기</a>&nbsp;&nbsp;<span>(0)</span>
+</th>
+<td>
+2021.03.27</td>
+</tr>
+<tr>
+<th>
+<a href="https://hi0seon.tistory.com/entry/42Seoulexam-exam02-%EA%B3%B5%EB%B6%80?category=891972">[42Seoul/exam] exam02 공부</a>&nbsp;&nbsp;<span>(0)</span>
+</th>
+<td>
+2021.03.18</td>
+</tr>
+<tr>
+<th>
+<a href="https://hi0seon.tistory.com/entry/42Seoulftserver-nginx-%EC%84%A4%EC%A0%95%ED%8C%8C%EC%9D%BC-autoindex-ssl-redirect-%EC%84%A4%EC%A0%95?category=891972">[42Seoul/ft_server] nginx 설정파일 (autoindex / ssl / redirect 설정)</a>&nbsp;&nbsp;<span>(0)</span>
+</th>
+<td>
+2021.02.16</td>
+</tr>
+<tr>
+<th>
+<a href="https://hi0seon.tistory.com/entry/42Seoulftserver-php%EB%9E%80?category=891972">[42Seoul/ft_server] php, autoindex</a>&nbsp;&nbsp;<span>(0)</span>
+</th>
+<td>
+2021.02.13</td>
+</tr>
+<tr>
+<th>
+<a href="https://hi0seon.tistory.com/entry/42Seoulftserver-docker-%EB%9E%80?category=891972">[42Seoul/ft_server] docker 와 docker file</a>&nbsp;&nbsp;<span>(0)</span>
+</th>
+<td>
+2021.02.10</td>
+</tr>
+</tbody></table></div></div>
+							</div>
+							<div class="area_etc">
+								
+							</div>
+
+							
+								<div class="area_related">
+									<strong class="tit_related">'42 SEOUL/배운 것들 정리' Related Articles</strong>
+									<ul class="list_related">
+										
+											<li class="thumb_type">
+												<a href="https://hi0seon.tistory.com/entry/42SeoulCub3d-2-cub3D-%EB%B2%A1%ED%84%B0%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%B4-%ED%99%94%EB%A9%B4-%EA%B7%B8%EB%A6%AC%EA%B8%B0?category=891972" class="link_related">
+													
+													<span class="thumb_related">
+														<img src="./[42Seoul_Cub3d] #1 cub3d 시작하기_files/saved_resource" class="img_related" alt="">
+													</span>
+													
+													<span class="txt_related">[42Seoul/Cub3d] #2 cub3D 벡터를 이용해 화면 그리기</span>
+													<span class="date_related">2021.03.27</span>
+													<span class="frame_related"></span>
+												</a>
+											</li>
+										
+											<li class="text_type">
+												<a href="https://hi0seon.tistory.com/entry/42Seoulexam-exam02-%EA%B3%B5%EB%B6%80?category=891972" class="link_related">
+													
+													<span class="txt_related">[42Seoul/exam] exam02 공부</span>
+													<span class="date_related">2021.03.18</span>
+													<span class="frame_related"></span>
+												</a>
+											</li>
+										
+											<li class="text_type">
+												<a href="https://hi0seon.tistory.com/entry/42Seoulftserver-nginx-%EC%84%A4%EC%A0%95%ED%8C%8C%EC%9D%BC-autoindex-ssl-redirect-%EC%84%A4%EC%A0%95?category=891972" class="link_related">
+													
+													<span class="txt_related">[42Seoul/ft_server] nginx 설정파일 (autoindex / ssl / redirect 설정)</span>
+													<span class="date_related">2021.02.16</span>
+													<span class="frame_related"></span>
+												</a>
+											</li>
+										
+											<li class="text_type">
+												<a href="https://hi0seon.tistory.com/entry/42Seoulftserver-php%EB%9E%80?category=891972" class="link_related">
+													
+													<span class="txt_related">[42Seoul/ft_server] php, autoindex</span>
+													<span class="date_related">2021.02.13</span>
+													<span class="frame_related"></span>
+												</a>
+											</li>
+										
+									</ul>
+									<a href="https://hi0seon.tistory.com/category/42%20SEOUL/%EB%B0%B0%EC%9A%B4%20%EA%B2%83%EB%93%A4%20%EC%A0%95%EB%A6%AC" class="link_more">more</a>
+								</div>
+							
+
+							<div class="area_reply">
+								<strong class="tit_reply" onclick=""><span id="commentCount129_0">0</span>  Comments</strong>
+								<div id="entry129Comment">
+									
+
+									<form method="post" action="https://hi0seon.tistory.com/comment/add/129" onsubmit="return false" style="margin: 0">
+										<fieldset class="fld_reply">
+											<legend class="screen_out">댓글쓰기 폼</legend>
+											
+												
+													<div class="writer_info">
+                                                    <span class="info_name">
+                                                        <label for="name" class="lab_info screen_out">이름</label>
+                                                        <span class="wrap_info">
+                                                            <input type="text" name="name" id="name" class="inp_info" placeholder="Name" tabindex="1">
+                                                        </span>
+                                                    </span>
+														<span class="info_pw ">
+                                                        <label for="password" class="lab_info screen_out">비밀번호</label>
+                                                        <span class="wrap_info">
+                                                            <input type="password" name="password" id="password" class="inp_info" placeholder="Password" tabindex="2">
+                                                        </span>
+                                                    </span>
+													</div>
+												
+												<div class="writer_check">
+                                                <span class="check_secret ">
+                                                    <input type="checkbox" name="secret" id="secret" class="inp_secret" tabindex="4">
+                                                    <label for="secret" class="lab_secret">
+                                                        <span class="ico_skin ico_check"></span>
+                                                        Secret
+                                                    </label>
+                                                </span>
+												</div>
+											
+
+											<div class="reply_write ">
+												<label for="comment" class="lab_write screen_out">내용</label>
+												<textarea name="comment" id="comment" class="tf_reply" placeholder="여러분의 소중한 댓글을 입력해주세요" tabindex="3"></textarea>
+											</div>
+
+											<div class="writer_btn">
+												<button type="submit" class="btn_enter" onclick="addComment(this, 129); return false;" tabindex="5">Send</button>
+											</div>
+										</fieldset>
+									</form>
+								</div><script type="text/javascript">loadedComments[129]=true;findFragmentAndHighlight(129)</script>
+							</div>
+
+
+						
+					
+
+					
+
+					
+
+					
+
+					
+
+					
+
+					
+						<div class="area_paging">
+    					<span class="inner_paging">
+                            <a href="https://hi0seon.tistory.com/entry/%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EA%B3%B5%ED%95%99-%EC%9C%A0%EC%8A%A4%EC%BC%80%EC%9D%B4%EC%8A%A4-%EB%8B%A4%EC%9D%B4%EC%96%B4%EA%B7%B8%EB%9E%A8" class="btn_prev "><span class="ico_skin ico_prev"></span>Prev</a>
+    						
+    							<a href="https://hi0seon.tistory.com/entry/2022-%ED%95%98%EB%B0%98%EA%B8%B0-%EB%84%A4%EC%9D%B4%EB%B2%84-%EA%B3%B5%EC%B1%84-%ED%9B%84%EA%B8%B0" class="link_page"><span>1</span></a>
+    						
+    							<a class="link_page"><span>···</span></a>
+    						
+    							<a href="https://hi0seon.tistory.com/entry/CC-dangling-pointer" class="link_page"><span>38</span></a>
+    						
+    							<a href="https://hi0seon.tistory.com/entry/NULL-0-0-%EC%B0%A8%EC%9D%B4%EC%A0%90" class="link_page"><span>39</span></a>
+    						
+    							<a href="https://hi0seon.tistory.com/entry/42Seoulexam-exam02-%EA%B3%B5%EB%B6%80" class="link_page"><span>40</span></a>
+    						
+    							<a href="https://hi0seon.tistory.com/entry/%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EA%B3%B5%ED%95%99-%EC%9C%A0%EC%8A%A4%EC%BC%80%EC%9D%B4%EC%8A%A4-%EB%8B%A4%EC%9D%B4%EC%96%B4%EA%B7%B8%EB%9E%A8" class="link_page"><span>41</span></a>
+    						
+    							<a class="link_page"><span class="selected">42</span></a>
+    						
+    							<a href="https://hi0seon.tistory.com/entry/Xcode-iOS-File-Cocoa-Touch-Class-Swift-File" class="link_page"><span>43</span></a>
+    						
+    							<a href="https://hi0seon.tistory.com/entry/iOS-CustomStringConvertible-%EC%8B%9C%EC%8A%A4%ED%85%9C-%EB%A1%9C%EA%B7%B8" class="link_page"><span>44</span></a>
+    						
+    							<a href="https://hi0seon.tistory.com/entry/UML-%EB%8B%A4%EC%9D%B4%EC%96%B4%EA%B7%B8%EB%9E%A8" class="link_page"><span>45</span></a>
+    						
+    							<a href="https://hi0seon.tistory.com/entry/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%B0%A9%EB%B2%95-%EC%9C%A0%EC%A0%80-%EC%8A%A4%ED%86%A0%EB%A6%AC%EB%9E%80" class="link_page"><span>46</span></a>
+    						
+    							<a class="link_page"><span>···</span></a>
+    						
+    							<a href="https://hi0seon.tistory.com/entry/%EB%85%B8%ED%8A%B8%EB%B6%81-%EC%B6%94%EC%B2%9C" class="link_page"><span>149</span></a>
+    						
+                            <a href="https://hi0seon.tistory.com/entry/Xcode-iOS-File-Cocoa-Touch-Class-Swift-File" class="btn_next ">Next<span class="ico_skin ico_next"></span></a>
+    					</span>
+						</div>
+					
+				</div>
+			</div>
+		</div>
+		<hr class="hide">
+		<div id="dkFoot" role="contentinfo" class="area_foot">
+			<small class="info_copyright">
+				Blog is powered by
+				<a href="http://www.kakaocorp.com/" class="emph_t" target="_blank">kakao</a> / Designed by
+				<a href="http://www.tistory.com/" class="emph_t" target="_blank">Tistory</a>
+			</small>
+		</div>
+	</div>
+
+
+
+<script src="./[42Seoul_Cub3d] #1 cub3d 시작하기_files/script.js"></script>
+<link rel="stylesheet" href="./[42Seoul_Cub3d] #1 cub3d 시작하기_files/xcode.min.css">
+<script src="./[42Seoul_Cub3d] #1 cub3d 시작하기_files/highlight.min.js"></script>
+<script src="./[42Seoul_Cub3d] #1 cub3d 시작하기_files/delphi.min.js"></script>
+<script src="./[42Seoul_Cub3d] #1 cub3d 시작하기_files/php.min.js"></script>
+<script src="./[42Seoul_Cub3d] #1 cub3d 시작하기_files/python.min.js"></script>
+<script src="./[42Seoul_Cub3d] #1 cub3d 시작하기_files/r.min.js"></script>
+<script src="./[42Seoul_Cub3d] #1 cub3d 시작하기_files/ruby.min.js"></script>
+<script src="./[42Seoul_Cub3d] #1 cub3d 시작하기_files/scala.min.js"></script>
+<script src="./[42Seoul_Cub3d] #1 cub3d 시작하기_files/shell.min.js"></script>
+<script src="./[42Seoul_Cub3d] #1 cub3d 시작하기_files/sql.min.js"></script>
+<script src="./[42Seoul_Cub3d] #1 cub3d 시작하기_files/swift.min.js"></script>
+<script src="./[42Seoul_Cub3d] #1 cub3d 시작하기_files/typescript.min.js"></script>
+<script src="./[42Seoul_Cub3d] #1 cub3d 시작하기_files/vbnet.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script><script type="text/javascript">
+ document.oncontextmenu = new Function ('return false');
+ document.ondragstart = new Function ('return false');
+ document.onselectstart = new Function ('return false');
+  document.body.style.MozUserSelect = 'none';
+</script>
+<script type="text/javascript" src="./[42Seoul_Cub3d] #1 cub3d 시작하기_files/functions.js"></script>
+<script>
+  (function () {
+    function isShortContents () {
+      return window.getSelection().toString().length < 30;
+    }
+
+    function copyWithSource (event) {
+      if (isShortContents()) {
+        return;
+      }
+      var range = window.getSelection().getRangeAt(0);
+      var contents = range.cloneContents();
+      var temp = document.createElement('div');
+
+      temp.appendChild(contents);
+      
+      var url = document.location.href;
+      var decodedUrl = decodeURI(url);
+      var postfix = ' [Hi yoahn 개발블로그:티스토리]';
+  
+      event.clipboardData.setData('text/plain', temp.innerText + '\n출처: ' + decodedUrl + postfix);
+      event.clipboardData.setData('text/html', '<pre data-ke-type="codeblock">' + temp.innerHTML + '</pre>' + '출처: <a href="' + url + '">' + decodedUrl + '</a>' + postfix);
+      event.preventDefault();
+    };
+  
+    document.addEventListener('copy', copyWithSource);
+  }())
+</script>
+	<script>
+	    lightbox.option({
+			"fadeDuration": 200,
+		    "resizeDuration": 200,
+		    "wrapAround": false,
+			"albumLabel": "%1 / %2",
+			"fitImagesInViewport":true ,
+			"stopEvent": false
+	    })
+	</script>            <script type="text/javascript" src="./[42Seoul_Cub3d] #1 cub3d 시작하기_files/tiara.min.js"></script>
+            <script type="text/javascript">window.tiara = {"svcDomain":"user.tistory.com","section":"\uae00\ubdf0","trackPage":"\uae00\ubdf0_\ubcf4\uae30","page":"\uae00\ubdf0","key":"3499314-129","customProps":{"userId":0,"blogId":"3499314","role":"guest","filterTarget":false,"trackPage":"\uae00\ubdf0_\ubcf4\uae30","entryId":"129"},"entry":{"entryId":"129","categoryName":"\ubc30\uc6b4 \uac83\ub4e4 \uc815\ub9ac","categoryId":"891972","author":"4125327","authorId":"4125327","image":"4125327","plink":"\/entry\/42SeoulCub3d-1-cub3d-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0","tags":[],"key":"3499314-129"},"sentryDsn":"https:\/\/a53520229cd744e798d42900d76b0e2a@aem-ingest.onkakao.net\/713","kakaoAppKey":"3e6ddd834b023f24221217e370daed18","appUserId":null};</script>
+            <script type="text/javascript" src="./[42Seoul_Cub3d] #1 cub3d 시작하기_files/tiara.min(1).js" defer=""></script>
+                        <script type="text/javascript">
+                window.roosevelt_params_queue = window.roosevelt_params_queue || [{channel_id: 'dk', channel_label: 'tistory'}];
+            </script>
+            <script type="text/javascript" src="./[42Seoul_Cub3d] #1 cub3d 시작하기_files/roosevelt_dk_bt.js" async=""></script><script type="text/javascript">if(window.console!=undefined){setTimeout(console.log.bind(console,"%cTISTORY","font:8em Arial;color:#EC6521;font-weight:bold"),0);setTimeout(console.log.bind(console,"%c  나를 표현하는 블로그","font:2em sans-serif;color:#333;"),0);}</script><iframe style="position:absolute;width:1px;height:1px;left:-100px;top:-100px" src="./[42Seoul_Cub3d] #1 cub3d 시작하기_files/api.html" id="editEntry"></iframe>            <div class="#menubar menu_toolbar ">
+                                <h2 class="screen_out">티스토리툴바</h2>
+                                <div class="btn_tool btn_tool_type1" id="menubar_wrapper"><button class="btn_menu_toolbar btn_menu_type2"><span class="img_common_tistory ico_tistory_sign">관리메뉴열기</span></button><div class="header_layer layer_tool" style="display: none;"><div class="inner_header_layer"><h2 class="screen_out">개인정보</h2><ul class="list_toolbar"><li><a href="https://www.tistory.com/" class="link_list">티스토리 홈</a></li><li><a href="https://www.tistory.com/category" class="link_list">스토리</a></li><li><a href="https://www.tistory.com/forum" class="link_list">포럼</a></li><li><a href="https://www.tistory.com/auth/login" class="link_list">로그인</a></li></ul></div></div></div><div class="btn_tool">
+                    <button class="btn_menu_toolbar btn_subscription  #subscribe" data-blog-id="3499314" data-url="https://hi0seon.tistory.com" data-device="web_pc">
+                        <strong class="txt_tool_id">Hi yoahn 개발블로그</strong>
+                        <em class="txt_state">구독하기</em>
+                        <span class="img_common_tistory ico_check_type1"></span>
+                    </button>
+                </div>
+                            </div><script type="text/javascript" src="./[42Seoul_Cub3d] #1 cub3d 시작하기_files/menubar.min.js"></script>        <div class="layer_tooltip">
+            <div class="inner_layer_tooltip">
+                <p class="desc_g"></p>
+            </div>
+        </div>
+        
+
+
+<div id="lightboxOverlay" class="lightboxOverlay" style="display: none;"></div><div id="lightbox" class="lightbox" style="display: none;"><div class="lb-outerContainer"><div class="lb-container"><img class="lb-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="><div class="lb-nav"><a class="lb-prev" href="https://hi0seon.tistory.com/entry/42SeoulCub3d-1-cub3d-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0"></a><a class="lb-next" href="https://hi0seon.tistory.com/entry/42SeoulCub3d-1-cub3d-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0"></a></div><div class="lb-loader"><a class="lb-cancel"></a></div></div></div><div class="lb-dataContainer"><div class="lb-data"><div class="lb-details"><span class="lb-caption"></span><span class="lb-number"></span></div><div class="lb-closeContainer"><a class="lb-close"></a></div></div></div></div></body></html>
