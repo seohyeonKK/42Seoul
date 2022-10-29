@@ -6,7 +6,7 @@
 /*   By: seohyuki <seohyuki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 04:24:01 by seohyuki          #+#    #+#             */
-/*   Updated: 2022/10/30 04:26:29 by seohyuki         ###   ########.fr       */
+/*   Updated: 2022/10/30 06:05:08 by seohyuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,6 @@ void	destroy(t_game *g)
 	mlx_destroy_image(g->mlx, g->d);
 	mlx_destroy_image(g->mlx, g->b);
 	mlx_destroy_image(g->mlx, g->f);
-	mlx_destroy_image(g->mlx, g->m);
-	mlx_destroy_image(g->mlx, g->m2);
 	mlx_destroy_image(g->mlx, g->e);
 	mlx_destroy_image(g->mlx, g->c);
 	mlx_destroy_window(g->mlx, g->wnd);

@@ -6,7 +6,7 @@
 /*   By: seohyuki <seohyuki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 16:35:00 by seohyuki          #+#    #+#             */
-/*   Updated: 2022/10/30 05:28:20 by seohyuki         ###   ########.fr       */
+/*   Updated: 2022/10/30 06:07:12 by seohyuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,6 @@ int	main(int argc, char *argv[])
 	draw_map(g);
 	g.move = 0;
 	mlx_key_hook(g.wnd, &key_hook, &g);
-	g.ani = 0;
-	g.spr = 0;
-	mlx_loop_hook(g.mlx, &sprite, &g);
 	mlx_hook(g.wnd, X_EVENT_KEY_EXIT, 0, &x_exit, &g);
 	mlx_loop(g.mlx);
 	return (0);
@@ -53,11 +50,8 @@ void	game_init(t_game	*g)
 	g->d = mlx_xpm_file_to_image(g->mlx, "img/d.xpm", &size, &size);
 	g->b = mlx_xpm_file_to_image(g->mlx, "img/bg.xpm", &size, &size);
 	g->f = mlx_xpm_file_to_image(g->mlx, "img/f.xpm", &size, &size);
-	g->m = mlx_xpm_file_to_image(g->mlx, "img/m.xpm", &size, &size);
-	g->m2 = mlx_xpm_file_to_image(g->mlx, "img/m2.xpm", &size, &size);
 	g->c = mlx_xpm_file_to_image(g->mlx, "img/c.xpm", &size, &size);
 	g->e = mlx_xpm_file_to_image(g->mlx, "img/e.xpm", &size, &size);
-	if (!g->w || !g->a || !g->s || !g->d || !g->b || !g->f || !g->m || !g->m2
-		|| !g->c || !g->e)
+	if (!g->w || !g->a || !g->s || !g->d || !g->b || !g->f || !g->c || !g->e)
 		free_error(g->map);
 }

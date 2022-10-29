@@ -6,7 +6,7 @@
 /*   By: seohyuki <seohyuki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 04:17:57 by seohyuki          #+#    #+#             */
-/*   Updated: 2022/10/30 05:28:21 by seohyuki         ###   ########.fr       */
+/*   Updated: 2022/10/30 06:04:53 by seohyuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	key_hook(int key, t_game *g)
 	if (key == W || key == A || key == S || key == D)
 	{
 		(g->move)++;
-		draw_string(g);
+		printf("move : %d\n", g->move);
 	}
 	if (key == W)
 		go(g, --i, j, g->w);
@@ -58,26 +58,7 @@ void	go(t_game *g, int i, int j, void *img)
 			g->map[i][j] = '0';
 		}
 	}
-	if (g->map[i][j] == 'M')
-		exit_game(0, g);
 	if (g->map[i][j] == 'E')
 		if (g->c_cnt == g->p_c)
 			exit_game(1, g);
-}
-
-void	draw_string(t_game *g)
-{
-	char	*str;
-	int		i;
-
-	i = 0;
-	str = ft_itoa(g->move);
-	while (i < g->col)
-	{
-		mlx_put_image_to_window(g->mlx, g->wnd, g->b, i * SIZE, 0 * SIZE);
-		mlx_put_image_to_window(g->mlx, g->wnd, g->f, i * SIZE, 0 * SIZE);
-		i++;
-	}
-	mlx_string_put(g->mlx, g->wnd, 10, 10, 0xff000000, str);
-	free(str);
 }

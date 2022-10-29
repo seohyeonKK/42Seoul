@@ -6,7 +6,7 @@
 /*   By: seohyuki <seohyuki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 04:22:13 by seohyuki          #+#    #+#             */
-/*   Updated: 2022/10/30 05:55:45 by seohyuki         ###   ########.fr       */
+/*   Updated: 2022/10/30 06:03:43 by seohyuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,12 +71,8 @@ char	**make_map(int map_file)
 	i = 0;
 	while (str[i])
 	{
-		if (str[i] == '\n' && str[i + 1] && str[i + 1] == '\n')
-		{
-			free(str);
-			error();
-		}
-		if (str[0] == '\n')
+		if (str[0] == '\n'
+			|| (str[i] == '\n' && str[i + 1] && str[i + 1] == '\n'))
 		{
 			free(str);
 			error();

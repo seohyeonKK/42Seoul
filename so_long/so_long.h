@@ -6,7 +6,7 @@
 /*   By: seohyuki <seohyuki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 20:43:59 by seohyuki          #+#    #+#             */
-/*   Updated: 2022/10/30 04:15:14 by seohyuki         ###   ########.fr       */
+/*   Updated: 2022/10/30 06:01:06 by seohyuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,6 @@ typedef struct s_game{
 	void	*d;
 	void	*b;
 	void	*f;
-	void	*m;
-	void	*m2;
 	void	*e;
 	void	*c;
 	int		wnd_w;
@@ -50,11 +48,8 @@ typedef struct s_game{
 	int		p_cnt;
 	int		e_cnt;
 	int		c_cnt;
-	int		m_cnt;
 	int		row;
 	int		col;
-	int		ani;
-	int		spr;
 }t_game;
 
 void	game_init(t_game	*g);
