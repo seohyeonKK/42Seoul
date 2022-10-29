@@ -6,7 +6,7 @@
 /*   By: seohyuki <seohyuki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 20:43:59 by seohyuki          #+#    #+#             */
-/*   Updated: 2022/10/30 05:55:38 by seohyuki         ###   ########.fr       */
+/*   Updated: 2022/10/30 06:16:29 by seohyuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,5 @@ int		key_hook(int key, t_game *g);
 void	sprite_img(t_game *g, int i, int j);
 int		sprite(t_game	*g);
 int		x_exit(t_game *g);
-
 
 #endif

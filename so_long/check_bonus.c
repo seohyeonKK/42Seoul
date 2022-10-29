@@ -6,7 +6,7 @@
 /*   By: seohyuki <seohyuki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 04:19:25 by seohyuki          #+#    #+#             */
-/*   Updated: 2022/10/30 06:14:18 by seohyuki         ###   ########.fr       */
+/*   Updated: 2022/10/30 06:34:29 by seohyuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,8 +99,8 @@ void	check_object_type(char ch, t_game *g, int i, int j)
 	if (ch == 'P')
 	{
 		g->p_cnt++;
-		g->p_i = j;
-		g->p_j = i;
+		g->p_i = i;
+		g->p_j = j;
 		g->map[i][j] = '0';
 	}
 	else if (ch == 'C')
