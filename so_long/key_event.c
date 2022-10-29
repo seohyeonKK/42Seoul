@@ -6,7 +6,7 @@
 /*   By: seohyuki <seohyuki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 04:17:57 by seohyuki          #+#    #+#             */
-/*   Updated: 2022/10/30 04:26:35 by seohyuki         ###   ########.fr       */
+/*   Updated: 2022/10/30 04:36:16 by seohyuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,6 @@ int	key_hook(int key, t_game *g)
 		printf("move_cnt = %d\n", g->move);
 		draw_string(g);
 	}
-	if (key == 17 || key == 2)
-		printf("exit");
 	if (key == W)
 		go(g, --i, j, g->w);
 	else if (key == A)

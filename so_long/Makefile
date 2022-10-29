@@ -6,12 +6,12 @@
 #    By: seohyuki <seohyuki@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/27 16:37:04 by seohyuki          #+#    #+#              #
-#    Updated: 2022/10/30 03:27:27 by seohyuki         ###   ########.fr        #
+#    Updated: 2022/10/30 04:34:41 by seohyuki         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC=cc
-SRC=main.c
+SRC=main.c check.c draw.c exit.c key_event.c map.c
 OBJ=$(SRC:.c=.o)
 NAME=so_long
 LIBFT=Libft
