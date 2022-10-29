@@ -6,7 +6,7 @@
 /*   By: seohyuki <seohyuki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 04:17:57 by seohyuki          #+#    #+#             */
-/*   Updated: 2022/10/30 04:36:16 by seohyuki         ###   ########.fr       */
+/*   Updated: 2022/10/30 05:28:21 by seohyuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ int	key_hook(int key, t_game *g)
 	if (key == W || key == A || key == S || key == D)
 	{
 		(g->move)++;
-		printf("move_cnt = %d\n", g->move);
 		draw_string(g);
 	}
 	if (key == W)
@@ -45,6 +44,8 @@ void	go(t_game *g, int i, int j, void *img)
 
 	x = g->p_j;
 	y = g->p_i;
+	mlx_put_image_to_window(g->mlx, g->wnd, g->b, x * SIZE, y * SIZE);
+	mlx_put_image_to_window(g->mlx, g->wnd, img, x * SIZE, y * SIZE);
 	if (g->map[i][j] == '0' || g->map[i][j] == 'C')
 	{
 		mlx_put_image_to_window(g->mlx, g->wnd, g->b, x * SIZE, y * SIZE);
@@ -60,10 +61,8 @@ void	go(t_game *g, int i, int j, void *img)
 	if (g->map[i][j] == 'M')
 		exit_game(0, g);
 	if (g->map[i][j] == 'E')
-	{
 		if (g->c_cnt == g->p_c)
 			exit_game(1, g);
-	}
 }
 
 void	draw_string(t_game *g)

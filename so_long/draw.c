@@ -6,7 +6,7 @@
 /*   By: seohyuki <seohyuki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 04:20:44 by seohyuki          #+#    #+#             */
-/*   Updated: 2022/10/30 04:26:32 by seohyuki         ###   ########.fr       */
+/*   Updated: 2022/10/30 05:40:29 by seohyuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ int	sprite(t_game	*g)
 
 void	sprite_img(t_game *g, int i, int j)
 {
-	mlx_put_image_to_window(g->mlx, g->wnd, g->b, j * SIZE, i * SIZE);
 	if (g->spr % 2 == 0)
 		mlx_put_image_to_window(g->mlx, g->wnd, g->m2, j * SIZE, i * SIZE);
 	else
