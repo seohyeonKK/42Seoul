@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   exit.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seohyuki <seohyuki@student.42seoul.kr>     +#+  +:+       +#+        */
+/*   By: seohyuki <seohyuki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 04:24:01 by seohyuki          #+#    #+#             */
-/*   Updated: 2022/10/30 06:05:08 by seohyuki         ###   ########.fr       */
+/*   Updated: 2022/10/30 14:28:34 by seohyuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ void	exit_game(int win, t_game *g)
 		printf("you win!\n");
 	else
 		printf("you lose!\n");
-	system("leaks so_long");
 	destroy(g);
 	exit(0);
 }
@@ -51,7 +50,6 @@ void	destroy(t_game *g)
 void	error(void)
 {
 	printf("Error\n");
-	system("leaks so_long");
 	exit(1);
 }
 
@@ -64,6 +62,5 @@ void	free_error(char **map)
 		free(map[i++]);
 	free(map);
 	printf("Error\n");
-	system("leaks so_long");
 	exit(1);
 }

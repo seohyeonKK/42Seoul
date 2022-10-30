@@ -6,11 +6,11 @@
 #    By: seohyuki <seohyuki@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/17 21:31:54 by seohyuki          #+#    #+#              #
-#    Updated: 2022/05/17 21:31:54 by seohyuki         ###   ########.fr        #
+#    Updated: 2022/10/30 14:27:05 by seohyuki         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC=gcc
+CC=cc
 CFLAGS=-Wall -Wextra -Werror
 
 HEADER=libft.h

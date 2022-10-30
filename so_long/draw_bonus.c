@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   draw_bonus.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seohyuki <seohyuki@student.42seoul.kr>     +#+  +:+       +#+        */
+/*   By: seohyuki <seohyuki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 04:20:44 by seohyuki          #+#    #+#             */
-/*   Updated: 2022/10/30 05:55:54 by seohyuki         ###   ########.fr       */
+/*   Updated: 2022/10/30 14:20:10 by seohyuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,7 @@ void	draw_map(t_game g)
 		i++;
 	}
 	mlx_put_image_to_window(g.mlx, g.wnd, g.s, g.p_j * SIZE, g.p_i * SIZE);
+	mlx_string_put(g.mlx, g.wnd, 10, 10, 0xff000000, "0");
 }
 
 void	put_img(t_game g, int x, int y, char ch)

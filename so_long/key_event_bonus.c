@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   key_event_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seohyuki <seohyuki@student.42seoul.kr>     +#+  +:+       +#+        */
+/*   By: seohyuki <seohyuki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 04:17:57 by seohyuki          #+#    #+#             */
-/*   Updated: 2022/10/30 05:55:50 by seohyuki         ###   ########.fr       */
+/*   Updated: 2022/10/30 13:04:26 by seohyuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,11 @@ void	draw_string(t_game *g)
 
 	i = 0;
 	str = ft_itoa(g->move);
+	if (!str)
+	{
+		destroy(g);
+		free_error(g->map);
+	}
 	while (i < g->col)
 	{
 		mlx_put_image_to_window(g->mlx, g->wnd, g->b, i * SIZE, 0 * SIZE);

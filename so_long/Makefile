@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: seohyuki <seohyuki@student.42seoul.kr>     +#+  +:+       +#+         #
+#    By: seohyuki <seohyuki@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/27 16:37:04 by seohyuki          #+#    #+#              #
-#    Updated: 2022/10/30 06:39:24 by seohyuki         ###   ########.fr        #
+#    Updated: 2022/10/30 14:27:14 by seohyuki         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,13 +30,13 @@ else
 endif
 
 %.o: %.c
-	arch -x86_64 $(CC) -Wall -Wextra -Werror -Imlx -c $< -o $@
+	$(CC) -Wall -Wextra -Werror -Imlx -c $< -o $@
 
 $(NAME): $(OBJECTS)
-	arch -x86_64 make -C $(LIBFT)
-	arch -x86_64 make -C $(GNL)
-	arch -x86_64 make -C $(MLX)
-	arch -x86_64 $(CC) $(LIBFT)/libft.a $(MLX)/libmlx.a $(GNL)/gnl.a $(OBJECTS) -Lmlx -lmlx -framework OpenGL -framework Appkit -o $(NAME)
+	make -C $(LIBFT)
+	make -C $(GNL)
+	make -C $(MLX)
+	$(CC) $(LIBFT)/libft.a $(MLX)/libmlx.a $(GNL)/gnl.a $(OBJECTS) -Lmlx -lmlx -framework OpenGL -framework Appkit -o $(NAME)
 
 all: $(NAME)
 clean:
